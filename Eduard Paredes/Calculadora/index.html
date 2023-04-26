@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora con HTML y JavaScript</title>
+    <style>
+        body{
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        input{
+            display: block;
+            margin: auto;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora con HTML y JavaScript</h1>
+    <input type="text" id="ope1" placeholder="Operador 1">
+    <input type="text" id="operacion" placeholder="+, -, /, *">
+    <input type="text" id="ope2" placeholder="Operador 2">
+    <input type="submit" id="boton" value="calcular" ><!--onclick=calcular() aqui el oneclick se vincula con la funcion tambien llamada "calcular" pero es la menos comun-->
+    <p id="parrafo"></p>
+    <script src="index.js" defer></script><!--El atributo defer indica al navegador que no espere por el script. En lugar de ello, debe seguir procesando el HTML, construir el DOM. El script carga “en segundo plano” y se ejecuta cuando el DOM esta completo.-->
+<body>
+</html>
