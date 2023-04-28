@@ -1,0 +1,65 @@
+<!--
+    En el siguiente ejercicio vamos a practicar con el bucle do while para que el código se ejecute una y otra vez hasta que el usuario decida parar
+-->
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>título</title> <meta charset="utf-8" />
+    </head>
+    <body>
+        <script>
+            let continuar;
+            do {
+                let nota = prompt("escribe una nota")
+                if (Number(nota) == nota){ //Number(nota) == nota aqui lo que hace es comprobar si el usuario a introducido un numero
+                    if(nota >= 0 && nota<3){
+                        document.write("Nota Muy deficiente: " + nota + "\r")
+                        console.log("Nota Muy deficiente: " + nota)
+                    }
+                    else if(nota >= 3 && nota < 5){
+                        document.write( "Nota Insuficiente: "  + nota + "\r")
+                        console.log("\r"+"Nota muy Insuficiente: " + nota)
+                    }
+                    else if(nota >= 5 && nota < 6){
+                        document.write("Nota Suficiente: " + nota + "\r")
+                        console.log("Nota muy Suficiente: " + nota)
+                    }
+                    else if(nota >=6 && nota < 7){
+                        document.write("Nota Bien: " + nota + "\r")
+                        console.log("Nota Bien: " + nota)
+
+                    }
+                    else if(nota >=7 && nota < 9){
+                        document.write("Nota Notable: " + nota + "\r")
+                        console.log("Nota Notable: " + nota)
+
+                    }
+                    else{
+                        if(nota >= 9 && nota <= 10){
+                            document.write("Nota Sobresaliente: " + nota + "\r")
+                            console.log("Nota Sobresaliente: " + nota)
+
+                        }
+                        else{
+                            document.write("Numero invalido: " + nota)
+                            console.log("Numero invalido: " + nota)
+                        }
+                    }
+                }
+                else{
+                    document.write("Introduce un numero valido" + nota)
+                    console.log("Introduce un numero valido" + nota)
+                }
+            
+                continuar = prompt("Deseas continuar? y o n")
+                console.log("Respuesta seleccionada: " + continuar)
+            } while (continuar === "y");
+            
+            /*
+            do
+                sentencia
+            while (condición);
+            */
+        </script>
+    </body>
+</html>
