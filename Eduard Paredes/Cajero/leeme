@@ -1,0 +1,22 @@
+TENER EN CUENTA
+//Este cajero automático va hacer solo de cash: No admiten depósitos, sólo dispensan efectivo.
+//si su usuario no esta "actualizado" debe de llamar al banco para "actualizar" su usuario
+//debes saber como utilizar un cajero automatico
+
+OBJETIVOS PRINCIPALES
+//FUNCIONES DE UN CAJERO AUTOMATICO COMUN
+digitar contraseña 
+consultar el saldo de tu cuenta 
+donar
+obtener dinero :maximo un millon de pesos y minimo mil pesos, mostrar una alerta al recibir el dinero
+cambio de contraseña
+
+//RECOMENDACIONES
+Tenga en cuenta las siguientes recomendaciones cuando vaya hacer uso de un cajero automático:
+•Verifique que no se encuentre ningún material extraño pegado en la ranura. En caso de encontrar algo sospechoso repórtelo de inmediato al servicio de atención al cliente de la entidad respectiva.
+•Memorice su clave secreta. No la porte ni la escriba en ninguna parte y, en lo posible, no la suministre a ninguna persona.
+•Cambie la clave de su tarjeta periódicamente, por lo menos una vez al mes.
+•Digite la clave personal con precaución y tape el teclado para evitar que pueda ser vista por otras personas.
+•No acepte colaboración de extraños al momento de realizar transacciones con tarjetas.
+•Ante cualquier eventualidad con el cajero o la tarjeta, comuníquese de inmediato con la entidad financiera.
+•Siempre destruya los comprobantes de las operaciones antes de arrojarlos a la basura o si lo prefiere consérvelos en un lugar seguro
