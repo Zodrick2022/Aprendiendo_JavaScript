@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>título</title> <meta charset="utf-8" />
+    </head>
+    <body>
+        <script>
+            //alert("Mi primer alerta") alert siver para mostrar en pantalla una alerta
+            let continuar;
+            let suma = 0
+            do {
+                let text = prompt("escribe un numero para sumar: ")
+                if(!isNaN(text)){
+                    let numero = parseFloat(text)//convertimos el promp a numero gracia a parseFloat()
+                    suma += numero // es una abreviación de la expresión suma = suma + numero. Esto significa que se está sumando el valor de numero a la variable suma, y luego se está almacenando el resultado en la misma variable suma asi actualizando el valor final.
+                    console.log("Numero digitado por el usuaro: " + numero)
+                }
+                else{
+                    alert("NO ES UN NUMERO: " + text)
+                }
+                continuar = prompt("Continuar? (escribe y o n)")
+            } while (continuar === "y");
+            document.write("total de la suma: " + suma)
+        </script>
+    </body>
+</html>

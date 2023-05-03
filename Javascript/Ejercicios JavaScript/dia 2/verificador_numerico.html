@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>título</title> <meta charset="utf-8" />
+    </head>
+    <body>
+        <script>
+            let continuar;
+            do {
+                let text = prompt("escribe un numero: ")
+                if(!isNaN(text)){//!isNaN (!=negacion)(isNaN=si no es numero) lo que estamos haciendo aqui es juntar 2 negaciones para que sea positivo ("-"+"-"="+") si es numero hacer esto :v y para el texto solo le quitamos la "!"
+                    document.write(" Tu numero es " + text)
+                    console.log("Tu numero es " + text)
+                }
+                else{
+                    console.log("numero invalido: " + text)
+                    console.log("numero invalido:  " + text)
+                }
+                continuar = prompt("Continuar? (escribe y o n)")
+            } while (continuar === "y");
+
+
+            /*
+            do
+                sentencia
+            while (condición);
+            */
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta content="text/html; charset=utf-8"> 
+        <script> 
+            function saludo() {
+                let nombre = prompt("Escribe tu Nombre: " ) 
+                document.write("Hola, " + nombre)
+            } 
+            function sum(){
+                let num1 = prompt("Escribe el primer numero para sumar")
+                let num2 = prompt("Escribe el segundo numero para sumar")
+                num1 = parseInt(num1)
+                num2 = parseInt(num2)
+                result = num1 + num2
+                document.writeln("Su resultado es: " + result)
+            }
+        </script>
+        <style>
+            body{
+                text-align: center;
+                margin-top: 400px;
+            }
+        </style> 
+    </head> 
+<body> 
+    <input type="button" onclick="saludo()" value="Pulsa aquí"> 
+    <input type="button" onclick="sum()" value="Presiona este botton">
+</body> 
+</html>

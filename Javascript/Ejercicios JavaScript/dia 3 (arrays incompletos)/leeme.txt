@@ -1,0 +1,119 @@
+El método JavaScript toString() convierte un arreglo en una cadena separada por una coma.
+
+let colores = ['verde', 'amarillo', 'azul'];
+
+console.log(colores.toString()); // verde,amarillo,azul
+--------------------------------------------------------------------
+El método JavaScript join() combina todos los elementos del arreglo en una cadena.
+
+Es similar al método toString(), pero aquí se puede especificar el separador en lugar de la coma predeterminada.
+
+let colores = ['verde', 'amarillo', 'azul'];
+
+console.log(colores.join('-')); // verde-amarillo-azul
+--------------------------------------------------------------------
+concat
+Este método combina dos arreglos o agrega más elementos a un arreglo y luego devuelve uno nuevo.
+
+let primerosNumeros = [1, 2, 3];
+let segundosNumeros = [4, 5, 6];
+let combinado = primerosNumeros.concat(segundosNumeros);
+console.log(combinado); // [1, 2, 3, 4, 5, 6]
+--------------------------------------------------------------------
+push()
+Este método agrega elementos al final de un arreglo y cambia el arreglo original.
+
+let buscadores = ['chrome', 'firefox', 'edge'];
+buscadores.push('safari', 'opera mini');
+console.log(buscadores); 
+// ["chrome", "firefox", "edge", "safari", "opera mini"]
+--------------------------------------------------------------------
+pop()
+Este método elimina el último elemento de un arreglo y lo devuelve.
+
+let buscadores = ['chrome', 'firefox', 'edge'];
+buscadores.pop(); // "edge"
+console.log(buscadores); // ["chrome", "firefox"]
+--------------------------------------------------------------------
+shift()
+Este método elimina el primer elemento de un arreglo y lo devuelve.
+
+let buscadores = ['chrome', 'firefox', 'edge'];
+buscadores.shift(); // "chrome"
+console.log(buscadores); // ["firefox", "edge"]
+--------------------------------------------------------------------
+unshift()
+Este método agrega un elemento(s) al comienzo de un arreglo y cambia el arreglo original.
+
+let buscadores = ['chrome', 'firefox', 'edge'];
+buscadores.unshift('safari');
+console.log(buscadores); //  ["safari", "chrome", "firefox", "edge"]
+--------------------------------------------------------------------
+indexOf()
+Este método busca un elemento en un arreglo y devuelve el índice donde se encontró; de lo contrario, devuelve -1
+
+let frutas = ['manzana', 'naranja', false, 3]
+
+frutas.indexOf('naranja'); // devuelve 1
+frutas.indexOf(3); // devuelve 3
+frutas.indexOf(null); // devuelve -1 (no fue encontrado)
+--------------------------------------------------------------------
+lastIndexOf()
+Este método funciona de la misma manera que indexOf() excepto que funciona de derecha a izquierda. Devuelve el último índice donde se encontró el elemento.
+
+let frutas = ['manzana', 'naranja', false, 3, 'manzana']
+
+frutas.lastIndexOf('manzana'); // devuelve 4
+--------------------------------------------------------------------
+filter()
+Este método crea un nuevo arreglo si los elementos de una matriz pasan una determinada condición.
+
+La sintaxis es:
+
+let resultados = arreglo.filter(function(elemento, índice, arreglo) {
+  // devuelve true si el elemento pasa el filtro
+});
+
+Ejemplo:
+
+Comprueba a los usuarios de Nigeria.
+
+const codigoPais = ['+234', '+144', '+233', '+234'];
+
+const nigeriano = codigoPais.filter( codigo => codigo === '+234');
+
+console.log(nigeriano); // ["+234", "+234"]
+--------------------------------------------------------------------
+map()
+Este método crea un nuevo arreglo manipulando los valores de un arreglo.
+
+Ejemplo:
+
+Muestra los nombres de usuario en una página. (Visualización básica de una lista de amigos)
+
+const usuarios = ['tina', 'danny', 'mark', 'bolaji'];
+const lista = usuarios.map(elem => {
+	return '<li>' + elem + '</li>';
+});
+
+const render = '<ul>' + lista.join('') + '</ul>';
+
+document.write(render); 
+/*
+   tina
+   danny
+   mark
+   bolaji 
+*/
+--------------------------------------------------------------------
+forEach()
+Este método es bueno para iterar a través de un arreglo. Aplica una función en todos los elementos de dicho arreglo.
+
+const colores = ['verde', 'amarillo', 'azul'];
+
+colores.forEach((elemento, índice) => console.log(elemento, índice));
+// devuelve el índice y todos los elementos del arreglo
+// "verde" 0
+// "amarillo" 1
+// "azul" 2
+--------------------------------------------------------------------
