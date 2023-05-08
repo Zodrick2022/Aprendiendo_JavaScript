@@ -2,7 +2,7 @@
 let num1 = prompt("Escribe un numero para convertirlo en factorial: ")
 let entero = parseInt(num1)//tranformamos el numero a entero
 if(entero < 0){
-    console-log("El numero debe ser mayor o igual a cero")
+    console.log("El numero debe ser mayor o igual a cero")
 }
 else{
     let factorial = 1;
