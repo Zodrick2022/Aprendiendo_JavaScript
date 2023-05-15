@@ -1,0 +1,16 @@
+undefined indica que no se ha inicializado una variable y que el valor esta ausente
+
+let indefinida;
+console.log(indefinida)
+salida = undefined
+--------------------------------------------------------------------
+null es un valor especial que indica la aucencia de un valor (este es colocado intencionalmente por o los programador(es))
+
+let nulo = null;
+console.log(nulo)
+-----------------------------------------------------------------
+NaN Not a Number (No es un Numero)
+
+let NoEsUnNumero = "hola" * 3
+console.log(NoEsUnNumero)
+salida = NaN

@@ -1,0 +1,17 @@
+var causa una variable global
+let no causa una variable global
+-----------------------------------------------------
+mala practica
+var hola= "hola mundo"
+{//La logica seria que dentro de las llaves solo exite un hola con "hello world" y una unica variable hola con "hola mundo"
+    var hola = "hello world"
+}
+//pero la cosa no es haci, yo quiero mostrar la primera variable hola con la cadena de texto "hola mundo" pero que es lo que pasa?? lo que pasa es que se genera una variable GLOBAL si yo imprimo en pantalla quiero que salga "hola mundo" el resultado siempre va hacer "hello world"
+------------------------------------------------------
+Buena practica
+let hola = "hola mundo"
+{
+    let hola = "hello world"
+    console.log(hola) //aqui siempre va a mostrar "hello world"
+}
+console.log(hola) //aqui siempre va a mostrar "hola mundo"

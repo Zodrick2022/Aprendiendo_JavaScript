@@ -1,0 +1,32 @@
+Dentro de un objeto a las variables se les llaman atributos y/o propiedades y a las funciones se les llama metodos
+
+dentro de un objeto tambien se pueden almacenar otro objeto y un metodo(funcion)
+const Eduard = {
+    /*atributos/propiedades*/
+    nombre:"Eduard",
+    apellido:"Paredes",
+    edad: 18
+    casado: false,
+    soltero: true,
+    pasatiempos:["prgramar","videojuesgos","boleyball"]
+    contacto:{ /*Objeto dentro de otro objeto*/
+        email: "eaparedes16@misena.edu.co",
+        numero: 3053726321423549235
+    }
+    saludar:function (){ /*metodo*/
+        console.log(`Holaaaa`)
+    }
+    /*this hace referencia al mismo objeto (pero hace mucho mas)*/
+    decirMiNombre:function(){
+        console.log(`Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años y me puedes contactar ${this.contacto.email} en Gmail.`)/*this -> de ti mismo llama a nombre y apellido*/
+    }
+}
+
+para llamar un atributo del objeto 
+console.log(Eduard.nombre) /*llamar un atributo*/
+console.log(Eduard.pasatiempos[1])/*llamamos a los pasatiempos(que es un arreglo) y que solo muestre "videojuesgos"*/
+console.log(Eduard.contacto.email)/*llamamos al objeto contacto y que solo nos muestre el email*/
+Eduard.saludar() /*llamamos al metodo saludar*/
+console.log(Object.keys(Eduard)) trae solo los atributos del objeto
+console.log(Object.values(Eduard)) trae solo los valores de los atributos del objeto
+console.log(Eduard.hasOwnProperty("nombre"))/*si un objeto tiene este atributo*/
