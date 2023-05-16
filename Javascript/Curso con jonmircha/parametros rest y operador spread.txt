@@ -1,0 +1,24 @@
+//se utilizan mucho en reactjs
+operadores infinitos REST 
+
+function sumar(a,b,...c){ ... esto indica que se espera uno o mas valores 
+    let resultado = a + b
+
+    c.forEach(function (n){ //es una forma de recorrer cada elemento de una lista, como si estuvieras revisando una lista de tareas.(en este caso no es una lista si no que se esta agregando mas tareas de la que esperaba)
+        resultado += n
+    })
+
+    return resultado;
+}
+
+console.log(sumar(1,2))
+console.log(sumar(1,2,3))
+console.log(sumar(1,2,3,4))
+console.log(sumar(1,2,3,4,5))
+
+//operador spread
+almacenar multiples elementos 
+const arr1 = [1,2,3,4,5], arr2 = [6,7,8,9,10]
+//quiero unir las 2 listas en una, se hace lo siguiente
+const arr3 = [...arr1,...arr2] //con los ... se unen, y se deben de poner de manera ordenada
+console.log(arr3)

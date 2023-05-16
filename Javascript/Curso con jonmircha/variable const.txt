@@ -1,1 +1,1 @@
-const sirve para que una variable nunca cambie de valor,pero si puedes agregar o quitar elementos en arrays y en  objetos solo con esos, no puedes tener contantes vacias siempre hay que definirlas 
+const sirve para que una variable nunca cambie de valor,pero si puedes agregar o quitar elementos dentro de un arrays(arreglo) y en objetos solo se declara con const, no puedes tener constantes vacias siempre hay que definirlas 

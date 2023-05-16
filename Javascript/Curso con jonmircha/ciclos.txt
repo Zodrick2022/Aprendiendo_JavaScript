@@ -1,0 +1,47 @@
+//while
+while (condicion){
+    //codigo a ejecutar
+}
+se compara primero y se ejecuta
+//do while
+do{
+    //codigo a ejecutar
+} while(condicion)
+se ejecuta la primera vez(cuando la variable ya este adentro del ciclo do while) y se compara
+-------------------------------------------------------------------
+//for
+for(inicializacion de variable; condicion; decremento o incremento unario){
+    //sentencias a ejecutar
+    //sentencias a ejecutar
+    //sentencias a ejecutar
+    //sentencias a ejecutar
+}
+--------------------------------------------------------------------
+//for in (solo para objetos) (Recorrer o iterar los atributos y/o propiedades que tenga un objeto)
+
+const Eduard = {
+    nombre:"Eduard"
+    apellido:"Paredes"
+    edad:18
+}
+
+for(const propiedad in Eduard){//guardamos todas los atributos del objeto Eduard en la variable propiedad
+    console.log(`Key:${propiedad}, Value:${Eduard[propiedad]}`)//mostramos por consola la "llave" que son las atributos que estan guardadas en la variable propiedad y que tambien nos muestre del objeto Eduard el valor de los atributos que estan guardadas en propiedad
+} 
+-------------------------------------------------------------------
+//for of (Recorrer todos los elementos de cualquier objeto que sea iterable(partirlos en pequeños elementos) en JavaScript)
+//arreglo
+const numeros = [10,20,30,40,50,60,70,80,90]
+
+for (const elemento of numeros){ //guardamos los atributos del arreglo numeros en la variable elemento
+    consola.log(elemento) //mostramos por consola los atributos del arreglo numeros
+}
+//cadena de texto
+
+let cadena = "Hola mundo"
+
+for(const caracter of cadena){//guardamos los atributos (letras y los espacios) de la cadena de texto en la variable caracter
+    console.log(caracter)//muestre por consola todos los atributos que contiene la cadena de texto cadena 
+}
+
+(el ciclo for of se trabaja mas con arreglos)

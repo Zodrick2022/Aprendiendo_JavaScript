@@ -1,0 +1,34 @@
+nueva forma de escribir aatributos y metodos
+
+//objeto normal
+
+let nombre = "Eduard", edad = 18
+
+const persona = {
+    nombre: nombre,
+    edad: edad,
+    hablar:function(){ //metodo
+        console.log("Hola")
+    }
+}
+
+
+console.log(persona)//llamamos al objeto
+persona.hablar()//llamamos al metodo del objeto
+
+//objeto literal
+
+let nombre = "Eduard", edad = 18 //declaramos una variable con nombre y edad con las cuales vamos a agregar en el objeto
+
+const persona = {
+    nombre,
+    edad,
+    soltero:true,
+    pais:"colombia",
+    hablar(){ //nueva forma para crear un metodo dentro de un objeto
+        console.log("Hola, soy nuevo metodo")
+    }
+}
+
+console.log(persona)
+persona.hablar()

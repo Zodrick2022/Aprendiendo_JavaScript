@@ -1,0 +1,18 @@
+nueva forma de definir funciones anonimas (sin nombre)
+
+const saludar = function (){ //funcion anonima
+    console.log(`hola`)
+}
+
+saludar()
+
+//arrow function
+const saludar =() => {
+    console.log(`hola`)
+}
+
+saludar()
+
+si la funcion tiene una linea de codigo se puede omitir las llaves
+const saludar =()=> console.log(`hola`)
+pero si tiene mas de una linea de codigo entonces es necesario poner las llaves

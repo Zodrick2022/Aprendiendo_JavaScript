@@ -1,0 +1,41 @@
+//if else
+if(){// si se cumple este valor has esto
+
+}
+else{//si no se cumple el valor has esto
+
+}
+//if else if else
+if(){// si se cumple este valor has esto
+
+}
+else if(){// si se cumple este valor has esto(se puede poner mas de un else if dentro de un if else)
+
+}
+else{//si no se cumple el valor has esto
+
+}
+-------------------------------------------------------------------
+operador ternario
+let opeternario = (condicion) ? linea de codigo si es verdadero : linea de codigo si es falso 
+
+?(if) 
+: (else)
+
+------------------------------------------------------------------
+switch - case break - default
+
+let variable = 2
+
+switch (variable){
+    case 1: inicio
+        //codigo
+    break; fin
+    case 2: inicio
+        //codigo
+    break; fin
+    default: inicio
+        //codigo
+    break; fin
+}
+en este ejemplo se va a ejecutar el case 2 ya que el valor de "variable" tiene como valor 2, si la variable no tiene el valor 1 o 2 entonces va a ejecutar el default

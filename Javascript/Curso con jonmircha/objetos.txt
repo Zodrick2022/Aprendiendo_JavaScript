@@ -16,9 +16,9 @@ const Eduard = {
     saludar:function (){ /*metodo*/
         console.log(`Holaaaa`)
     }
-    /*this hace referencia al mismo objeto (pero hace mucho mas)*/
+    /*this -> hace referencia al mismo objeto (pero hace mucho mas)*/
     decirMiNombre:function(){
-        console.log(`Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años y me puedes contactar ${this.contacto.email} en Gmail.`)/*this -> de ti mismo llama a nombre y apellido*/
+        console.log(`Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años y me puedes contactar ${this.contacto.email} en Gmail.`)/*this -> de "ti" mismo llama a nombre y apellido*/
     }
 }
 

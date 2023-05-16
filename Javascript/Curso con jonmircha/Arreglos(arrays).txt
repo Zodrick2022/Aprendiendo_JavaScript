@@ -3,12 +3,12 @@ en el arreglo se pueden poner numeros, cadenas de texto, booleanos,hasta otro ar
 const b = [1, true, "Hola", ["A","B","C"]]
 para motrar un elemento del arreglo se hace lo siguiente
 -console.log(b[2])
--salida = "Hola", sempre se empieza el arreglo desde 0 
+-salida = "Hola", siempre se empieza el arreglo desde 0 
 para motrar un elemeto de un arrglo dentro de otro arreglo se hace lo siguiente
 console.log(b[3][1])
 salida = "B"
 --------------------------------------------------------------
-agregar un nuevo elemento hacie el arreglo
+agregar un nuevo elemento hacia el arreglo
  const newArreglo = ["naranja","amarillo","azul"]
 
  newArreglo.push("rojo") agregar un elemento "siempre lo pone alfinal del arreglo"

@@ -4,7 +4,7 @@ let indefinida;
 console.log(indefinida)
 salida = undefined
 --------------------------------------------------------------------
-null es un valor especial que indica la aucencia de un valor (este es colocado intencionalmente por o los programador(es))
+null es un valor especial que indica la aucencia de un valor (este es colocado intencionalmente por o el y/o los programador(es))
 
 let nulo = null;
 console.log(nulo)
@@ -14,3 +14,4 @@ NaN Not a Number (No es un Numero)
 let NoEsUnNumero = "hola" * 3
 console.log(NoEsUnNumero)
 salida = NaN
+por que sale como respuesta NaN por que como tal la cadena de texto no es un numero

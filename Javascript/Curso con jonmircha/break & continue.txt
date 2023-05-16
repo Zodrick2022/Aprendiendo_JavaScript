@@ -1,0 +1,19 @@
+const numeros = [1,2,3,4,5,6,7,8,9,0]
+
+//breack
+
+for(let i = 0; i < numeros.length; i++){//numero.length cuenta el numero de atributos que tiene el arreglo(array)
+    if(i === 5){ //si la variable i esta en la pocicion 5 hacer lo siguiente:
+        break; //romper el ciclo desde la pocicion 5 y salir del ciclo for  
+    }
+    console.log(numeros[i]);
+}
+
+//continue
+
+for(let i = 0; i < numeros.length; i++){//numero.length cuenta el numero de atributos que tiene el arreglo(array)
+    if(i === 5){ //si la variable i esta en la pocicion 5 hacer lo siguiente
+        continue;//saltar la pocicion 5 y seguir con el arreglo(array) en este ejemplo salta el numero 6 y sigue con el siguiente numero hasta finalizar
+    }
+    console.log(numeros[i]);
+}

@@ -1,6 +1,6 @@
 Una function es un bloque de codigo, autocontenido,que se puede definir una vez y ejecuar en cualquier momento. Opcionalmente, una funcion puede aceptar parametros y devolver un valor
 
-las funciones en JavaScript son objetos, un tipo especial de objetos: se dice que las funciones son ciudadanos de primera clase porque pueden asignarse a u valor, y pueden pasarse como argumentos y usarse como un valor de retorno
+las funciones en JavaScript son objetos, un tipo especial de objetos
 
 Funcion declarada
 function estoEsUnaFuncion(){
@@ -12,11 +12,11 @@ estoEsUnaFuncion()
 Retonar valores
 function estoEsUnaFuncion(){
     console.log("Hola")
-    return "Mundo" //despues del return, si tiene mas lineas de codigo se ignoran
+    return "Mundo" //despues del return, si tiene mas lineas de codigo se ignoran despues del return
 }
 
 invocacion de Funcion
-let nombreFun = estoEsUnaFuncion() //siempre se asigna a una variable cuado vaya a retorna un valor string o numerico
+let nombreFun = estoEsUnaFuncion() //siempre se asigna a una variable cuado vaya a retorna un valor string o numerico(cuando utilize un return)
 console.log(nombreFun)
 --------------------------------------------------------------
 Aceptar parametros
@@ -25,8 +25,8 @@ funcion saludar(nombre,edad){
 }
 
 saludar("Eduard",18)
-saludar() si no escribimos nada los valores pasan a ser undefined, si queremos cambiar el undefined por otra cosa hacemos lo siguiente
-function saludar(nombre = "Desconocido", edad = 0) asi los valores no se declaran estos pasan hacer "Desconocido" y 0
+saludar() si no escribimos nada, los valores pasan a ser undefined, si queremos cambiar el undefined por otra cosa hacemos lo siguiente
+function saludar(nombre = "Desconocido", edad = 0) asi los valores no se declaran "undefined" si no estos pasan hacer "Desconocido" y 0
 --------------------------------------------------------------
 Funcion expresada
 

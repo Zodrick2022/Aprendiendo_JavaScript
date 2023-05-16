@@ -1,0 +1,48 @@
++ sumar
+- restar
+* multiplicar
+/ dividir
+% residuo de la divicion(modulo)
+--------------------------------------------------------------
+() cuando haya una operacion dentro de parentesis este se va a ejecutar primero
+---------------------------------------------------------
+operadores relacionales
+< menor
+> mayor
+>= mayor igual
+<= menor igual
+= es asignacion de variable (let a = 4)
+== igual de comparacion de valores (4 == 5)
+=== "estrictamente" igual es decir, igual de tipo de dato y de valores (5 === 5; salida: true) (5 === "5"; salida: false) siempre utilizar la comparacion de 3 iguales
+!= diferente
+!== "super" diferente
+---------------------------------------------------------------
+incremento y decremento (+,-,*,/)
++= incremento (se suma al valor)
+-= decremento (se elimina al valor)
+*= decremento (se multiplica al valor)
+/= decremento (se divide al valor)
+
+en vez de hacer esto:
+let i =  2
+i = i + 2
+hacemos esto:
+let i = 2
+i += 2
+------------------------------------------------------------------
+operdador unario
+++ (se suma 1 al valor)
+-- (se elimina 1 al valor)
+let i = 0
+i++
+console.log(i)
+salida = 1
+---------------------------------------------------------------
+para que podamos sumar uno dentro de un
+console.log(++i) esta bien escrito
+console.log(i++) esta mal escrito
+--------------------------------------------------------------
+operadores logicos
+! = Not (no): Niega, es decir lo que es verdadero lo vuelve falso y viceversa
+|| = Or (o): Cuando tengo 2 o mas condiciones, con que una se cumpla, es decir sea verdadera, el || se valide
+&& = And (y): Cuando tengo 2 o mas condiciones, todas deben cumplirse, es decir ser verdadesras para que && se valide

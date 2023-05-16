@@ -1,0 +1,14 @@
+const persona = {
+    nombre: "Eduard",
+    apellido: "Paredes",
+    edad: 18
+}
+
+console.log(persona) //sin destructurar
+salida: { nombre: 'Eduard', apellido: 'Paredes', edad: 18 }
+//para no perder tiempo en llamar cada uno de los atributos del primer objeto se hace lo siguiente
+const {nombre,apellido, edad} = persona//tiene que ser las variables exactamente igual a como estan en el primer objeto
+//no importa como tengas ordenado el segundo objeto, ya que lo que hace es buscar el mismo atributo con el mismo nombre y asignar el valor del atributo
+
+console.log(nombre,apellido,edad)// con destructurar
+salida: Eduard Paredes 18
