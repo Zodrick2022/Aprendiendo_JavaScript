@@ -22,3 +22,22 @@ const arr1 = [1,2,3,4,5], arr2 = [6,7,8,9,10]
 //quiero unir las 2 listas en una, se hace lo siguiente
 const arr3 = [...arr1,...arr2] //con los ... se unen, y se deben de poner de manera ordenada
 console.log(arr3)
+--------------------------------------------------------------------
+
+ejercicio
+
+const arr1 = [1,2,3,4,5], arr2 = [6,7,8,9,10], arr3 = [11,12,13,14,15], arr4 = [16,17,18,19,20,], arr5 = ["hola"], arr6 = ["mundo"]
+//quiero unir las listas en una sola, se hace lo siguiente
+const arr7 = [...arr1,...arr2,...arr3,...arr4,...arr5,...arr6] //con los ... se unen
+console.log(arr7)
+
+arr7.push("programar es divertido")
+console.log("agregando nuevo elemento a la lista: " + arr7)
+//no quiero que este el ultimo elemento
+//arr7.pop()
+//console.log(arr7)
+//recorrer un arreglo(array)
+arr7.forEach(function (e,index){
+    console.log(`numeros de posiciones del arreglo: ${index}`)
+    console.log(`contenido del arreglo: ${e}`)
+})

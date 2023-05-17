@@ -1,4 +1,4 @@
-nueva forma de escribir aatributos y metodos
+nueva forma de escribir atributos y metodos
 
 //objeto normal
 
@@ -32,3 +32,24 @@ const persona = {
 
 console.log(persona)
 persona.hablar()
+--------------------------------------------------------------------
+//creacion de mi primer objeto literal
+let ciudad = "Bogota D.C", pais = "Colombia"
+
+const creacion = {
+    pais_origen: "España",
+    lugar_viaje:{
+        pais,//agregando el valor de pais que definimos antes del objeto
+        ciudad//agregando el valor de ciudad que definimos antes del objeto
+    },
+    fecha: "12/02/20XX",
+    comentario(){
+        console.log(`Espero que ${this.lugar_viaje.pais} me sorprenda y que ${this.lugar_viaje.ciudad} sea de mi agrado`)
+        console.log(`llevo ${this.dia[2]} dia(s) en prepararme para ir a ${this.lugar_viaje.pais}`)
+        console.log(`me voy en la fecha ${this.fecha}`)
+    },
+    dia: [1,2,3,4,5,6,7]//no importa donde coloques el arreglo dentro de un objeto, this hace referencia al objeto y no habra problema 
+}
+
+console.log(creacion)//llamamos al objeto como tal
+creacion.comentario()//llamamos al metodo(funcion) del objeto en cuestion

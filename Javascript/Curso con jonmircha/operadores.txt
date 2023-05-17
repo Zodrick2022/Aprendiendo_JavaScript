@@ -3,6 +3,12 @@
 * multiplicar
 / dividir
 % residuo de la divicion(modulo)
+** exponenciacion
+--------------------------------------------------------------
+let a = 5
+let b = 2 //tambien s epiede con decimales jemplo X = 9 y Y = 1/2 salida = 3(rais cuadrada de 9)
+console.log(a**b)//exponenciacion de dos numero
+salida = 25
 --------------------------------------------------------------
 () cuando haya una operacion dentro de parentesis este se va a ejecutar primero
 ---------------------------------------------------------
@@ -31,16 +37,16 @@ let i = 2
 i += 2
 ------------------------------------------------------------------
 operdador unario
-++ (se suma 1 al valor)
--- (se elimina 1 al valor)
+++ (se suma 1 al valor , solo con variables)
+-- (se elimina 1 al valor, solo con variables)
 let i = 0
 i++
 console.log(i)
 salida = 1
 ---------------------------------------------------------------
 para que podamos sumar uno dentro de un
-console.log(++i) esta bien escrito
-console.log(i++) esta mal escrito
+console.log(++i) esta bien escrito "funciona y muestra el valor incrementado"
+console.log(i++) esta mal escrito "muestra el valor original pero no el valor incrementado"
 --------------------------------------------------------------
 operadores logicos
 ! = Not (no): Niega, es decir lo que es verdadero lo vuelve falso y viceversa

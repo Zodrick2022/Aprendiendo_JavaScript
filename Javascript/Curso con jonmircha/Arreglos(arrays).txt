@@ -19,9 +19,11 @@ agregar un nuevo elemento hacia el arreglo
 newArreglo.forEach(function (e,index){
     console.log(`<li id="${index}">${e}</li>`)
 })
-e = recorre el arreglo
+
+e = recorre el arreglo(elemento)
 index = muestra el numero de posiciones en la que estan
 
 salida = <li id="0">naranja</li>
          <li id="1">amarillo</li>
          <li id="2">azul</li>
+-------------------------------------------------------------------

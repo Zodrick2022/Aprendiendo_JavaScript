@@ -18,7 +18,7 @@ const Eduard = {
     }
     /*this -> hace referencia al mismo objeto (pero hace mucho mas)*/
     decirMiNombre:function(){
-        console.log(`Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años y me puedes contactar ${this.contacto.email} en Gmail.`)/*this -> de "ti" mismo llama a nombre y apellido*/
+        console.log(`Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años y me puedes contactar ${this.contacto.email} en Gmail.`)/*this -> de "ti" mismo llama a nombre y apellido, si no se pone nada alado de this es va a lanzar el sistema operativo donde se este operando "window, linux,MacOs, etc"*/
     }
 }
 

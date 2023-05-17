@@ -16,3 +16,15 @@ saludar()
 si la funcion tiene una linea de codigo se puede omitir las llaves
 const saludar =()=> console.log(`hola`)
 pero si tiene mas de una linea de codigo entonces es necesario poner las llaves
+------------------------------------------------------------------
+ejemplo
+//arrow fuctions sin simplificar
+const saludar = () =>{
+    console.log("funcion arrow SIN simplificar")
+}
+
+saludar()//en este caso siempre se pone el llamado a la funcion despues de haber definido esta misma
+//---------------------------------------------------------------
+//arrow fuctions simplificado
+const saludar1 = () => console.log("funcion arrow simplificado")//solo en estos casoso se puede omitir las llaves ya que solo tiene una linea de codigo, pero si tiene mas de una linea de codigo es obligatorio poner las llaves "{}"
+saludar1()//en este caso tambien se debe poner el llamado a la funcion despues de haber definido esta misma

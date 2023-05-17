@@ -15,3 +15,19 @@ let hola = "hola mundo"
     console.log(hola) //aqui siempre va a mostrar "hello world"
 }
 console.log(hola) //aqui siempre va a mostrar "hola mundo"
+-------------------------------------------------------------------
+ejemplo
+var num = 12
+{//bloque
+    var num = 35253465
+}
+
+console.log(num)//aqui quiero traer la variable num con el que esta definido 12 pero como var es golbal, es decir, no respeta los bloques, se actualiza y trae el ultimo valor especificado de num
+//con let
+let num1 = 15
+{//bloque
+    let num1 = 1243235 //dentro del bloque solo existe num1 con el valor 1243235
+    console.log("llamando a num1 dentro de un bloque: " + num1)
+}
+
+console.log(num1)//trea el valor 15
