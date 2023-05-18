@@ -6,7 +6,7 @@
 ** exponenciacion
 --------------------------------------------------------------
 let a = 5
-let b = 2 //tambien s epiede con decimales jemplo X = 9 y Y = 1/2 salida = 3(rais cuadrada de 9)
+let b = 2 //tambien se epuede con decimales jemplo X = 9 y Y = 1/2 salida = 3(rais cuadrada de 9)
 console.log(a**b)//exponenciacion de dos numero
 salida = 25
 --------------------------------------------------------------
