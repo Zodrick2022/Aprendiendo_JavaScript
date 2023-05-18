@@ -29,7 +29,7 @@ salida = "Hola mundo"
 Lo que hace el metodo trim es quitar los espacios en blanco que estan alrededor de la cadena de texto
 ---------------------------------------------------------------
 let saludo = "Hola Mundo"
-console.log(saludo.split(" ")) o tambien split(",") para que separe el texto cuando el usuario haya escrito una coma
+console.log(saludo.split(" ")) o tambien split(",") para que separe el texto cuando el usuario haya escrito una coma, si no se hace una separacion que esta dentro de split("") lo que hace es que cada letra lo separe y lo convieta en una lista, pero si se hace con una separacion, separa las palabras y lo combierte a una lista
 salida = ["Hola","Mundo"]
 Lo que hace el metodo split es crear un array o arreglo para la cadena de texto
 ----------------------------------------------------------------
