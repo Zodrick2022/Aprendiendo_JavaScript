@@ -30,3 +30,4 @@ Eduard.saludar() /*llamamos al metodo saludar*/
 console.log(Object.keys(Eduard)) trae solo los atributos del objeto
 console.log(Object.values(Eduard)) trae solo los valores de los atributos del objeto
 console.log(Eduard.hasOwnProperty("nombre"))/*si un objeto tiene este atributo*/
+console.log(Eduard.contacto.hasOwnProperty("email"))/*si el objeto dentro del objeto tiene "email"*/
