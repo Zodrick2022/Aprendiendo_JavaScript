@@ -9,6 +9,8 @@ for(let i = 0; i < numeros.length; i++){//numero.length cuenta el numero de atri
     console.log(numeros[i]);
 }
 
+console.log("----------------------------------------------")
+
 //continue
 
 for(let i = 0; i < numeros.length; i++){//numero.length cuenta el numero de atributos que tiene el arreglo(array)
