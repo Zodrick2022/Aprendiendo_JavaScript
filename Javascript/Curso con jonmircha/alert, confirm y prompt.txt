@@ -1,0 +1,8 @@
+alert("Hola soy una alerta")//solo tiene un boton de aceptar
+confirm("Hola esto es una confirmacion")//la diferencia de confirm a alert es que confirm tiene dos botones de aceptar y cancelar
+prompt("Hola esto es un prompt(aviso)")//permite al usuario ingresar un valor
+------------------------------
+valor por defecto
+alert = undefined
+confirm = true(si se presiona aceptar), false(si se presiona canselar)
+prompt = (cadena vacia si no se coloca nada), null(si coloca algo dentro de la caja pero despues presiona el boton cancelar)

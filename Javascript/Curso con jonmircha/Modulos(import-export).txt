@@ -1,0 +1,2 @@
+//los modulos(import/export) despues del 2015 suplantaron a las funciones anonimas autoejecutables(mandaban a llamar archivos por medio de la consola, mientras que los modulos llaman los archivos mediante el mismo archivo JavaScript)
+/*AUN NO ESTA TERMINADO*/

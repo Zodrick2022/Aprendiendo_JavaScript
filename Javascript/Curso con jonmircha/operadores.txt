@@ -31,10 +31,10 @@ incremento y decremento (+,-,*,/)
 
 en vez de hacer esto:
 let i =  2
-i = i + 2
+i = i + 2 //en esta linea hay se simplifica
 hacemos esto:
 let i = 2
-i += 2
+i += 2//esta linea esta simplificada
 ------------------------------------------------------------------
 operdador unario
 ++ (se suma 1 al valor , solo con variables)
