@@ -11,7 +11,7 @@ let expReg = new RegExp("lorem","ig")//patron a buscar, pide 2 paramentros, dame
 //segunda manera
 let expReg = /lorem/ig
 
-console.log(expReg.test(cadena))//probar que la expresion regular exista en la cadena(devuelve un booleano =>"verdadero o falso")
+console.log(expReg.test(cadena))//probar que la expresion regular exista en la cadena(devuelve un booleano =>"verdadero o falso")(este sirve para las validaciones)
 console.log(expReg.exec(cadena))//nos devuelve un arreglo y uno de sus atributos (index) nos dice en que ultima posicion se contro la expresion regular(coincidencia)
 /*la mejor manera es la segunda*/
 

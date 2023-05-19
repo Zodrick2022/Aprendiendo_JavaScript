@@ -1,2 +1,50 @@
 //los modulos(import/export) despues del 2015 suplantaron a las funciones anonimas autoejecutables(mandaban a llamar archivos por medio de la consola, mientras que los modulos llaman los archivos mediante el mismo archivo JavaScript)
-/*AUN NO ESTA TERMINADO*/
+--------------
+En el archivo de HTML5 se manda a llamar el archivo JavaScript con modulos:
+<script src="nomCarpeta/nomArchivo.js" type="module"></script>
+// si en el archivo JavaScript tiene importados uno o mas modulos, se coloca en la etiqueta script el atributo type="module" ya que sin este atributo genera un error al mandar a llamar el archivo JavaScript
+///mandar a exportar un archivo JavaScript
+export const num_pi= Math.PI//solo se exporta lo que se nececita
+//si se quiere llamar otra variable, arreglo, objeto, clases y/o funcion solo se coloca la palabra export en el unicio de cada una
+----
+//mandar a importar un archivo JavaScript adentro de otro archivo JavaScript
+import {nomFuncion--> num_pi} from "aquiva la ruta del archivo ejemplo ./nomCarpeta/nomArchivo"
+console.log(num_pi)//mostramos por pantalla la  num_pi
+----------------------------------------------------------------------------------
+si queremos importar 2 o mas funciones,variables, arreglo, objetos, etc, se hace lo siguiente
+function sumar(a,b){
+    return a + b
+}
+
+function resta(a,b){
+    return a - b
+}
+export const aritmetica = {//en este caso estamos reuniendo las 2 funciones sumar, resta
+    sumar,
+    resta
+}
+-----
+//otro archivo JavaScript
+import{aritmetica} from "./nomCarpeta/nomArchivo"
+
+console.log(aritmetica.sumar(3,4))
+console.log(aritmetica.resta(5,8))
+------------------------------------------------------------------------------------
+//export default(exportacion por defecto)
+// Esto significa que cuando otros archivos importen ese archivo, obtendrán automáticamente el valor predeterminado sin tener que especificarlo explícitamente.
+//solo se puede hacer export default funciones o clases
+//no se puede exportar 2  funciones y/o clases con export default(en un solo archivo), esto genera un error
+//no se puede exportar por defecto una variable let y const (export default let saludo = "hola")
+//si queremos hacer esto que se exporte por defecto se hace lo siguiente
+let saludo = "hola"
+export default saludo
+//asi se puede hacer esa exportacion por defecto
+-------
+//tembien se puede poner alias, ejemplo:
+import {aritmetica as aver} from "./nomCarpeta/nomArchivo"//esto se hace cuando el nombre es demasiado largo 
+console.log(aver.sumar(3,4))
+console.log(aver.resta(5,8))
+/*
+"export" se utiliza para compartir múltiples funciones, variables u otros elementos de tu código.
+"export default" se usa para compartir una única función, clase o valor predeterminado de tu código.
+*/

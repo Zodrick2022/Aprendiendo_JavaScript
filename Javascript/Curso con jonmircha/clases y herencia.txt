@@ -24,7 +24,7 @@ class Animal{ //las clases no reciben propiedades
 
 class Perro extends Animal{ //extends -> que es lo que recibe la instancia Perro de la instancia Animal??
 constructor(nombre, genero,tamanio){
-    super(nombre,genero)//se manda a llamar el constructor de la clase padre"Animales"
+    super(nombre,genero)//se manda a llamar el constructor de la clase padre "Animales"("aqui pasa todos los atributos de clase Animal")
     this.tamanio = tamanio
 }
 //Sobreescritura de metodos(funciones) del prototipo padre en el hijo
@@ -83,3 +83,71 @@ serpiente.saludar()
 serpiente.sonar()
 serpiente.sssss()
 serpiente.color_p()
+-------
+ejercicio propio
+
+class Vehiculo{
+    constructor(tipo,tamanio){
+        this.tipo = tipo
+        this.tamanio = tamanio
+    }
+    info(){
+        console.log(`El vehiculo \"${this.tipo}\" nos ayuda a llegar mas rapido a nuestro destino`)
+    }
+    static info_add(){
+        console.log("\t \t DIA DEL NACIMIENTO DEL VEHICULO MOTORIZADO\n En el año 1886 del dia 22 de enero, Carl Benz patento su \"Vehiculo motorizado con motor de gasolina\" de tre ruedas")
+    }
+}
+
+class Moto extends Vehiculo{
+    constructor(tipo,tamanio,color){
+        super(tipo,tamanio,color)
+        this.tipo = tipo
+        this.tamanio = tamanio
+        this.color = color
+    }
+    info(){
+        console.log(`Las motos de la marca \"${this.tipo}\" son muy rapidas `)
+    }
+    pel(){
+        console.log(`Las motos de la marca \"${this.tipo}\"son muy rapaidas PEROOOO!!! son muy peligrosas para gente principiante`)
+    }
+}
+
+class Auto extends Vehiculo{
+    constructor(tipo, tamanio){
+        super(tipo,tamanio)
+        this.tipo = tipo
+        this.tamanio = tamanio
+        this.plazas = null
+    }
+    
+    get getPlazas(){
+        return this.plazas
+    }
+    
+    set setPlazas(plazas){
+        return this.plazas = plazas
+    }
+}
+
+
+
+
+Vehiculo.info_add()
+console.log("-------------------------------------------")
+
+
+const veh = new Vehiculo("auto","pequeño"),moto = new Moto("susuki","pequeño","gris"), auto = new Auto("Ferrari","mediano","rojo")
+
+console.log(veh)
+veh.info()
+console.log("-------------------------------------------")
+console.log(moto)
+moto.info()
+moto.pel()
+console.log("-------------------------------------------")
+console.log(auto)
+auto.setPlazas = 2
+console.log(auto.getPlazas)
+console.log(auto)

@@ -6,7 +6,7 @@ la palabra reservada length cuenta el numero de caracteres que esta en la variab
 let saludo = "Hola Mundo"
 console.log(saludo.toUpperCase())
 salida = HOLA MUNDO
-Lo que hace el metodo toUpperCase() es escribir las letras en matusculas
+Lo que hace el metodo toUpperCase() es escribir las letras en mayusculas
 -----------------------------------------------------------
 let saludo = "Hola Mundo"
 console.log(saludo.toLowerCase())
