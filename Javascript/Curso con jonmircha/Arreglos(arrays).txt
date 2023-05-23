@@ -1,4 +1,4 @@
-en el arreglo se pueden poner numeros, cadenas de texto, booleanos,hasta otro arreglo
+en el arreglo se pueden poner numeros, cadenas de texto, booleanos,hasta otro arreglo y objetos
 
 const b = [1, true, "Hola", ["A","B","C"]]
 para motrar un elemento del arreglo se hace lo siguiente

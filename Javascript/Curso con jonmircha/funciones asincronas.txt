@@ -1,0 +1,74 @@
+van a esperar a que algo se cumpla para poder seguir ejecutando el proceso 
+
+//promesa
+  function cuadradoPromise(value) {
+    if (typeof value !== "number") {//si la value no es un numero devuelve una promesa rechazada
+        return Promise.reject(`Error, el valor " ${value} " ingresado no es un número`);
+    }
+
+    return new Promise((resolve, reject) => {//si value es un numero, se crea una nueva promesa
+        setTimeout(() => {//temporizador
+          resolve({//objeto
+            value,//valor original 
+            result: value * value //cuadrado de value
+          });
+        }, 0 | Math.random() * 1000);//generar un número entero aleatorio entre 0 y 1000.(tiempo de espera aleatorio) 
+      });
+    }
+
+    async function funcionAsincronaDeclarada() {//funcion asincrona(async) declarada
+      try {
+        console.log('Inicio Async Function');
+
+        let obj = await cuadradoPromise(0);//espera el resultado de cuadradoPromise ya que sin el await, el resultado es undefinide
+        console.log(`Async Function: ${obj.value}, ${obj.result}`);
+        //hay una serie de llamadas a cuadradoPromise con diferentes valores. Cada vez que se realiza una llamada, el programa espera a que se resuelva la promesa antes de continuar. Luego, se imprime en la consola el valor original y el resultado del cuadrado.
+        obj = await cuadradoPromise(1);
+        console.log(`Async Function: ${obj.value}, ${obj.result}`);
+
+        obj = await cuadradoPromise(2);
+        console.log(`Async Function: ${obj.value}, ${obj.result}`);
+
+        obj = await cuadradoPromise("3");
+        console.log(`Async Function: ${obj.value}, ${obj.result}`);
+
+        obj = await cuadradoPromise(4);
+        console.log(`Async Function: ${obj.value}, ${obj.result}`);
+
+        obj = await cuadradoPromise(5);
+        console.log(`Async Function: ${obj.value}, ${obj.result}`);
+
+        console.log('Fin Async Function');
+      } catch (err) {//si en el bloque de try hay un error, mostrar en consola el error
+        console.error(err)
+      }
+    }
+
+    funcionAsincronaDeclarada();
+
+    const funcionAsincronaExpresada = async () => {//funcion asincrona(async) expresada 
+      try {
+        console.log('Inicio Async Function');
+        //hay una serie de llamadas a cuadradoPromise con diferentes valores. Cada vez que se realiza una llamada, el programa espera a que se resuelva la promesa antes de continuar. Luego, se imprime en la consola el valor original y el resultado del cuadrado.
+        let obj = await cuadradoPromise(6);//espera el resultado de cuadradoPromise ya que sin el await, el resultado es undefinide
+        console.log(`Async Function: ${obj.value}, ${obj.result}`);
+
+        obj = await cuadradoPromise(7);
+        console.log(`Async Function: ${obj.value}, ${obj.result}`);
+
+        obj = await cuadradoPromise(8);
+        console.log(`Async Function: ${obj.value}, ${obj.result}`);
+
+        obj = await cuadradoPromise("9");
+        console.log(`Async Function: ${obj.value}, ${obj.result}`);
+
+        obj = await cuadradoPromise(10);
+        console.log(`Async Function: ${obj.value}, ${obj.result}`);
+
+        console.log('Fin Async Function');
+      } catch (err) {//si en el bloque de try hay un error, mostrar en consola el error
+        console.error(err)
+      }
+    }
+
+    funcionAsincronaExpresada();

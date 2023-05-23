@@ -1,0 +1,32 @@
+Las promesas en JavaScript son como promesas que haces y esperas que se cumplan.
+{
+    Imagina que tienes un amigo que te promete traerte un helado delicioso. Pero, en lugar de esperar a que tu amigo vuelva con el helado para hacer otras cosas, tu amigo te da una tarjeta que dice: "Te prometo que te traeré un helado". Esta tarjeta es como una promesa.
+
+    Con esta promesa, puedes hacer otras cosas mientras esperas a que tu amigo cumpla su promesa. Por ejemplo, puedes jugar con tus juguetes o ver una película. Y cuando tu amigo regrese con el helado, te lo dará y cumplirá su promesa.
+
+    En JavaScript, las promesas funcionan de manera similar. Imagina que tienes una tarea que llevará tiempo, como cargar una imagen desde internet. En lugar de esperar
+    a que la imagen se cargue antes de hacer otras cosas, puedes hacer una promesa de que la imagen se cargará y luego continuar con otras acciones. Y cuando la imagen se haya cargado, se cumplirá la promesa y podrás realizar las acciones correspondientes.
+
+    let promesa = new Promise(function(resolve, reject) {
+    // Simulación de carga de imagen
+        setTimeout(function() {
+            let imagenCargada = true;
+
+            if (imagenCargada) {
+                resolve("La imagen se ha cargado correctamente");  // Se cumple la promesa
+            } else {
+                reject("Ha ocurrido un error al cargar la imagen");  // Se rechaza la promesa
+            }
+        }, 2000);  // Esperamos 2 segundos para simular la carga de la imagen
+    });
+
+    promesa.then(function(mensaje) {
+    console.log(mensaje);  // Se ejecuta cuando la promesa se cumple
+    }).catch(function(error) {
+    console.log(error);  // Se ejecuta cuando la promesa se rechaza
+    });
+
+    usamos el método then() para especificar qué hacer cuando la promesa se cumple. En este caso, imprimimos un mensaje en la consola. Si la promesa se rechaza, usamos el método catch() para manejar el error y también imprimir un mensaje.
+
+    Así que las promesas en JavaScript te permiten hacer una promesa y esperar a que se cumpla, mientras haces otras cosas. Cuando la promesa se cumple, puedes realizar acciones adicionales y, si la promesa se rechaza, puedes manejar el error de manera adecuada.
+}
