@@ -2,8 +2,8 @@ van a esperar a que algo se cumpla para poder seguir ejecutando el proceso
 
 //promesa
   function cuadradoPromise(value) {
-    if (typeof value !== "number") {//si la value no es un numero devuelve una promesa rechazada
-        return Promise.reject(`Error, el valor " ${value} " ingresado no es un número`);
+    if (typeof value !== "number") {//si la varible "value" no es un numero devuelve una promesa rechazada
+        return Promise.reject(`Error, el valor " ${value} " ingresado no es un número`);//promesa rechazada
     }
 
     return new Promise((resolve, reject) => {//si value es un numero, se crea una nueva promesa

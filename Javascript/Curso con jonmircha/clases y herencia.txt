@@ -1,6 +1,6 @@
 azucar sintatico, es decir una forma de escribir clases(prototipos) mas facilmente
 escribir de una forma mas sencilla los prototipos
--------------------------------------------------------------
+---------------------------------------------------------------------------------------
 //Funcion constructora de clases
 class Animal{ //las clases no reciben propiedades
     constructor(nombre, genero){//este recibe las propiedades en vez de la clase

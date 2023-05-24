@@ -1,0 +1,24 @@
+programacion orientada a objetos
+es un nuevo mecanismo, que te permite crear un objeto basado en un objeto literal inicial(una copia de un objeto)
+
+const persona={//objeto base
+    nombre:"",
+    apellido:"",
+    edad:0
+}
+
+const manejador = {//manejador
+    set(obj, prop, valor){//validaciones, el manejador recibe 3 parametros, el objeto como tal, las propiedades a evaluar y el valor que va a recibir cada una de esas propiedades
+         obj[prop] = valor //que a las propiedades del objeto les asigne el valor que les esta dando el usuario, sin esto el proxi no mostrara los valores deseados
+    }
+
+
+}
+
+
+const eduard = new Proxy(persona, manejador)//proxy nececita 2 objetos, el principal(en este caso persona) y el manejador(en este caso el manejador)
+eduard.nombre="Eduard"
+eduard.apellido="Paredes"
+eduard.edad = 18
+console.log(eduard)
+//TERMINAR
