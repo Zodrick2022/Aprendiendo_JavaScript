@@ -21,9 +21,13 @@ let opeternario = (condicion) ? linea de codigo si es verdadero : linea de codig
 
 ?(if) 
 : (else)
+//una alternativa de if else
 
+let edad = 15
+let esAdulto = (edad < 18)? console.log("Joven") : console.log("Adulto")//si edad es menor a 18 mostrara joven, si no mostrara Adulto
+console.log(esAdulto)
 ------------------------------------------------------------------
-switch - case break - default
+switch - case break - default//este puede reemplazar a los else if
 
 let variable = 2
 

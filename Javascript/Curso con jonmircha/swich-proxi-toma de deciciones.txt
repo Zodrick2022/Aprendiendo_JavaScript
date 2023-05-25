@@ -1,0 +1,146 @@
+//Agregarlo en un archivo html con css para poder subir el ejercicio de JavaScript
+//TOMA DE DECICIONES(PUNTOS)
+let jugador = prompt("Nombre jugador")//Registre nombre ususario
+let puntos = parseFloat(prompt("PUNTOS"))//Registre los puntos y los convertimos a numero
+let minPoints = 100//puntos minimos
+let maxPoints = 500//puntos maximos
+
+if(isNaN(jugador)){//si el nombre de jugador no es un numero, has lo siguiente
+    if(puntos === minPoints){//si puntos es estrictamente igual a los puntos minimos, has lo siguiente
+    alert(`Bien hecho, ${jugador}`)
+    console.log(`Bien hecho, ${jugador}`)
+    }
+    else if (puntos < 70) {//si no se cumplio el if anterior entonces verifica este else if, si puntos es menor a 70 has lo siguiente
+        alert(`TU PUEDES, ${jugador.toUpperCase()}!!!!!!!!!!!`)
+        console.log(`TU PUEDES, ${jugador.toUpperCase()}!!!!!!!!!!!`)
+    }
+    else if (puntos >= 70 && puntos < minPoints){//si no se cumplio el else if anterior entonces verifica este else if,si puntos es mayor o igual a 70 y puntos es menor a los puntos minimos, has lo siguiente
+        alert(`Estas muy serca ${jugador}`)
+        console.log(`Estas muy serca ${jugador}`)
+    }
+    else if(puntos >= minPoints && puntos < maxPoints){//si no se cumplio el else if anterior entonces verifica este else if,si puntos es mayor o igual a los puntos minimos y puntos menor que los puntos maximos, has lo siguiente
+        alert(`Muy bien, ${jugador}`)
+        console.log(`Muy bien, ${jugador}`)
+    }
+    else if (puntos === maxPoints) {//si no se cumplio el else if anterior entonces verifica este else if, puntos es estrictamente igual a los puntos maximos, has lo siguiente
+        alert(`ALCANSASTE EL NUMERO DE PUNTOS MAXIMOS OBTENIDOS, QUE BUEN JUGADOR ERES ${jugador.toUpperCase()}!!!!!!!`)
+        console.log(`ALCANSASTE EL NUMERO DE PUNTOS MAXIMOS OBTENIDOS, QUE BUEN JUGADOR ERES ${jugador.toUpperCase()}!!!!!!!`)
+    }
+    else if (puntos > maxPoints){//si no se cumplio el else if anterior entonces verifica este else if, si puntos es mayor que los puntos maximos, has lo siguiente
+        alert("IMPOSIBLEE!!!!")
+        console.log("IMPOSIBLEE!!!!")
+    }
+    else{//si no se cumplio, el if y todos los else if, has lo siguiente
+        alert(`INTENTALO DE NUEVO ${jugador.toUpperCase()}!!!!!!!`)
+        console.log(`INTENTALO DE NUEVO ${jugador.toUpperCase()}!!!!!!!`)
+    }    
+}
+else{//si no se cumplio el if, has lo siguiente
+    alert(`Nombre invalido ${jugador}`)
+    console.log(`Nombre invalido ${jugador}`)
+}
+------------
+let seguir = ``//definimos la variable seguir con el valor String(cadena de texto)
+do {
+    let opciones = parseFloat(prompt("Elije una de estas opciones\n1) Par o Impar\n2) opcion 2\n3) opcion 3\n4) opcion 4\n5) opcion 5"))//opciones
+    alert(`Opcion que elegiste ${opciones}`)//mostrar la opcion elegida
+    switch (opciones){//Menu
+        case 1://si la opcion elegida fue 1, has esto
+            alert(`Opcion elegida 1`)
+            alert("Par o Impar")
+            console.log(`Opcion elegida 1`)
+            let numero = prompt("Escribe un numero cualquiera")
+            if(numero < 0){
+                console.log("Numero introducido invalido ")
+                alert("Numero introducido invalido ")
+            }
+            else{
+                mostrar = numero%2 //sacamos el residuo de la division
+                if(mostrar == 0){
+                    console.log("El numero " + numero + " es par")
+                    alert("El numero " + numero + " es par")
+                }
+                else if(mostrar == 1){
+                    console.log("El numero " + numero + " es impar")
+                    alert("El numero " + numero + " es impar")
+                }
+                else{
+                    console.log("CARACTERES INVALIDOS")
+                    alert("CARACTERES INVALIDOS")
+                }
+            }
+        break; //fin, salta afuera del switch
+        case 2://si la opcion elegida fue 2, has esto
+            alert(`Opcion elegida 2`)
+	    alert("Multiplo")
+            console.log(`Opcion elegida 2`)
+	    let multiplo = prompt("Escribe un numero cualquiera")
+	    if (isNaN(multiplo)) {
+    	    	alert(`No es un numero ${multiplo}`)
+	    }
+	    else{
+    	        alert("Es un numero")
+    		alert(`mostrando numero ${multiplo}`)
+    		let i = 1
+    		let multiplicar = 0
+    		while(i < 11){
+        	multiplicar = multiplo * i
+        	i++
+        	console.log(multiplicar)
+    	    }
+	}
+        break; //fin, salta afuera del switch
+        case 3://si la opcion elegida fue 3, has esto
+            alert(`Opcion elegida 3`)
+            console.log(`Opcion elegida 3`)
+        break;//fin, salta afuera del switch
+        case 4: //si la opcion elegida fue 4, has esto
+            alert(`Opcion elegida 4`)
+            console.log(`Opcion elegida 4`)
+        break; //fin, salta afuera del switch
+        case 5: //si la opcion elegida fue 5, has esto
+            alert(`Opcion elegida 5`)
+            console.log(`Opcion elegida 5`)
+        break; //fin, salta afuera del switch
+        default://si no eligio una de las opciones del 1 hasta el 5 o si eligio un numero fuera de 1 o 5 va hacer lo siguiente
+            alert(`Opcion no valida ${opciones}`)
+            console.log(`Opcion no valida ${opciones}`)
+        break; //fin, salta afuera del switch
+    }
+     seguir = prompt(`Elige "S" para repetir o "N" para salir`)//traemos la variable "seguir" que ya hemos definido anteriormente y le asigbanamos un prompt
+} while (seguir === "S" || seguir === "s")//si dentro de la variable fue asignada "S" o "s", se va a repetir el ciclo dowhile
+alert("Fin")
+console.log("Fin")
+-------------------
+proxy
+const persona={//objeto base
+    nombre:"",
+    apellido:"",
+    edad:0,
+    gmail:""
+}
+
+const manejador = {//manejador
+    set(obj, prop, valor){//validaciones, el manejador recibe 3 parametros del objeto como tal, las propiedades a evaluar y el valor que va a recibir cada una de esas propiedades
+    if(Object.keys(obj).indexOf(prop) === -1){ 
+    return console.error(`la propiedad "${prop}" no existe en el objeto persona`)//Aqui no se asigna la propiedad gmail a proxy ni a persona
+    }
+        if((prop === "nombre" || prop === "apellido") && !(/^[A-Za-zÑñÀàÈèÌìÒòÙùÜü\s]+$/g.test(valor))) {
+            return console.error(`La propiedad "${prop}" solo acepta letras y espacios en blanco`)
+        }
+         obj[prop] = valor //las propiedades del objeto les asigne el valor que les esta dando el usuario, sin esto el proxi no mostrara los valores deseados
+    }
+}
+
+
+const eduard = new Proxy(persona, manejador)//proxy nececita 2 objetos, el principal(en este caso persona) y el manejador(en este caso el manejador)
+eduard.nombre="Eduard"
+eduard.apellido="Paredes"
+eduard.edad = 18
+eduard.gmail = "eaparedes16@misena.edu.co"//agregar una nueva propiedad al objeto(persona)
+eduard.estado_civil = "soltero"
+console.log(eduard)
+console.log(Object.keys(eduard))
+console.log(Object.keys(persona))
+console.log(Object.values(eduard))
+console.log(Object.values(persona))

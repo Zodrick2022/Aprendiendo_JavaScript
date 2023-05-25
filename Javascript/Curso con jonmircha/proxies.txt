@@ -8,11 +8,9 @@ const persona={//objeto base
 }
 
 const manejador = {//manejador
-    set(obj, prop, valor){//validaciones, el manejador recibe 3 parametros, el objeto como tal, las propiedades a evaluar y el valor que va a recibir cada una de esas propiedades
-         obj[prop] = valor //que a las propiedades del objeto les asigne el valor que les esta dando el usuario, sin esto el proxi no mostrara los valores deseados
+    set(obj, prop, valor){//validaciones, el manejador recibe 3 parametros del objeto como tal, las propiedades a evaluar y el valor que va a recibir cada una de esas propiedades
+         obj[prop] = valor //las propiedades del objeto les asigne el valor que les esta dando el usuario, sin esto el proxi no mostrara los valores deseados
     }
-
-
 }
 
 
@@ -20,5 +18,14 @@ const eduard = new Proxy(persona, manejador)//proxy nececita 2 objetos, el princ
 eduard.nombre="Eduard"
 eduard.apellido="Paredes"
 eduard.edad = 18
+eduard.gmail = "eaparedes16@misena.edu.co"//agregar una nueva propiedad al objeto(persona)
 console.log(eduard)
-//TERMINAR
+-----
+//si queremos que no agregue el proxy otras propiedades, hacemos lo siguiente dentro del manejador set
+if(Object.keys(obj).indexOf(prop) === -1){ 
+    return console.error(`la propiedad "${prop}" no existe en el objeto persona`)//Aqui no se asigna la propiedad gmail a proxy ni a persona
+}
+//validacion de nombre y apellido solo se aceptan letras mayusculas, minusculas, espacios en blanco y todas las abreviaciones de a e i o u con tildes y doble punto
+if((prop === "nombre" || prop === "apellido") && !(/^[A-Za-zÑñÀàÈèÌìÒòÙùÜü\s]+$/g.test(valor))) {
+    return console.error(`La propiedad "${prop}" solo acepta letras y espacios en blanco`)
+}

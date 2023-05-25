@@ -1,6 +1,7 @@
 console.error("Esto es un error") //muestra por consola un error con la cadena de texto que especifiquemos
 console.log(console)//muestra todas las caracteristicas que tiene la consola
 console.warn("Esto es una alerta")//mostrara una alerta en la consosla
+alert("Esto e una alerta")//mostrar por la ventana la alerta
 console.info("Esto es un mensaje informativo")//es como lo mismo de console.log
 console.log("Un registro de lo que ha pasado en nuestra aplicacion")
 console.clear()//limpiar todo lo que este dentro de la consola
