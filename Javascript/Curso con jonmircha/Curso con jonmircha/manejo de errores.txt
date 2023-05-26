@@ -1,0 +1,19 @@
+try{
+    console.log("En el try se agrega el codigo a evaluar")
+}catch(error){
+    console.log("catch, captura cualquier error surgido o lanzado en el try")
+    console.log(error)//mostrar el error generado
+}finally{//generalmente el bloque finally no se utiliza mucho asi que podemos omitirlo
+    console.log("El bloque finally se ejecutara siempre al fianl de un bloque try-catch, es decir no importa si catch capturo un error o no, siempre se va a mostrar el bloque finally")
+}
+
+ejemplo
+
+try{
+   let numero = "y"
+   if(isNaN(numero))//si no es un numero te va regresar verdadero si no va a regresar falso (en este caso es un texto)
+   throw new Error("El caracter introducido no es un Numero")//mensaje de error personalizado
+   console.log(numero * numero)//error ya que la variable numero no es un numero
+}catch(error){
+    console.log(`Se produjo el siguiente error: ${error}`)//mostramos por consola el error con el mensaje personalizado
+}

@@ -1,0 +1,23 @@
+valores que tienden a ser verdadero
+ (true)
+ ({})  objetos vacios
+ ([])  arreglos vacios
+ (42) 
+ ("foo") cadenas de texto
+ (new Date()) fechas
+ (-42) numeros negativos
+ (3.14)
+ (-3.14) numeros decimales negativos
+ (Infinity)
+ (-Infinity)
+-------------------------------------------------------
+valores que tienden a ser falso
+ (false) 
+ (null) valores nulos
+ (undefined) valores indefinidos
+ (0) el numero 0
+ (-0) el numero -0
+ (0n) el BigInt
+ (NaN) Not a Number = no es un numero
+ ("") una cadena de texto vacia
+ (document.all) DOM

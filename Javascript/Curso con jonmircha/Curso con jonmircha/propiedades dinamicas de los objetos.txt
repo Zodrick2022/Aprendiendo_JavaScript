@@ -1,0 +1,22 @@
+//generar el nombre de las propiedades de manera dinamica en un objeto
+
+
+let aleatorio = Math.round(Math.random() * 100 + 5)//creamos una variable llamada "aleatorio" y su valor sea un numero entero, que sea aleatorio(random), que ese numero aleatorio este entre 0 y 100, para evitar prblemas con el array(arreglo) "usuarios" le sumamos 5 => posiciones con el array
+const objUsuarios = {
+    propiedad:"valor",//propiedad estatica
+    [`id_${aleatorio}`]: "Valor aleatorio"//propiedad dinamica con posicion aleatorio y von valor "Valor aleatorio"
+}
+const usuarios = ["Pedro","Martha","Daniel","Flor","Daniela"]
+
+usuarios.forEach((usuario,index) => objUsuarios[`id_${index}`] = usuario)//vamos a recorrer la lista "usuarios" y que cree una variable "usuario" y "index", y dentro del objeto "objUsuarios" cree una llave(key) con lo siguiente `id_` y dentro de esa llave que almacene el numero de las pociciones de la variable "index" y el valor de las llaves sea el de la variable "usuario"
+
+
+console.log(objUsuarios)
+const arreglo = Object.values(objUsuarios)//traemos los valores de objUsuarios, que se convierten aun arreglo
+console.log("Pocisiones del objeto: " + arreglo.length)//contamos los valores que trae la variable "arreglo" 
+console.log("---------------------------------------------")
+console.log("Pociciones del arreglo: " + usuarios.length)//pociciones del arreglo
+console.log(usuarios)
+/*for(const propiedad in objUsuarios){
+    console.log(`Key:${propiedad}, Value:${objUsuarios[propiedad]}`)//recorremos los atributos del objeto
+}*/
