@@ -1,0 +1,52 @@
+//muy importante en JavaScript, JSON(notacion de objetos de JavaScript), es un formato ligero de intercambio de datos, estandar de los navegadores
+//tipos de datos que acepta
+string = cadenas de texto
+number = numeros
+object = objetos
+array = arreglos
+true = verdadero
+false = falso
+null = nulo
+
+//Archivo json 
+
+{//todos los atributos deben ir en comillas dobles, no acepta comillas simple ni template string, igualmente con todos los valores excepto el null 
+    "nombre":"Eduard",
+    "apellido": "Paredes",
+    "edad": "21",
+    "estatura": "1,85",
+    "nulo": null
+}
+
+
+//Archivo JavaScript
+
+const persona ={
+    nombre:"Eduard",
+    apellido: "Paredes",
+    edad: 21,
+    estatura: 1,85,
+    nulo: null
+}
+
+console.log(persona)
+
+console.log(JSON)//llamar al objeto json como tal
+console.log(JSON.parse("{}"))//convertir un objeto
+console.log(JSON.parse("[1,2,3]"))//convertir un arreglo
+console.log(JSON.parse("true"))//convertir a true
+console.log(JSON.parse("false"))//convertir a false
+console.log(JSON.parse("19"))//convertir a numero
+console.log(JSON.parse("null"))//convertir a nulo
+console.log(JSON.parse("hola mundo"))//error no valido para json
+console.log(JSON.parse("undefined"))//error no valido para json
+---
+//con stringify lo convierte cualquiercosa a cadena de texto
+console.log(JSON.stringify({}))
+console.log(JSON.stringify([1,2,3]))
+console.log(JSON.stringify(true))
+console.log(JSON.stringify(false))
+console.log(JSON.stringify(null))
+console.log(JSON.stringify(undefined))
+console.log(JSON.stringify({x:2,y:3}))//X y Y los convierte a texto y los muestra en doble comilla, ya que son atributos de un objeto
+console.log(JSON.parse('"nombre":"Eduard","apellido": "Paredes","edad": "21","estatura": "1,85","nulo": null'))//todo toca colocarlo en una sola linea

@@ -1,13 +1,18 @@
 //while
-while (condicion){
+while (condicion){//se ejecutan mientras la condicion sea verdadera
     //codigo a ejecutar
 }
 se compara primero y se ejecuta
 //do while
 do{
     //codigo a ejecutar
-} while(condicion)
-se ejecuta la primera vez(cuando la variable ya este adentro del ciclo do while) y se compara
+} while(condicion)//se ejecutan mientras la condicion sea verdadera
+se ejecuta la primera vez(cuando la variable ya este adentro del ciclo do while) y despues se compara
+(si no se coloca uno de estas variable con unos de los operadores unario el siclo while se vuelve en un bucle infinito)
+let i = 0
+while(i<=10){
+    console.log(i)
+}
 -------------------------------------------------------------------
 //for
 for(inicializacion de variable; condicion; decremento o incremento unario){

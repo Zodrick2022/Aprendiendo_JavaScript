@@ -1,0 +1,33 @@
+{
+    this: this es una palabra clave especial en JavaScript que se refiere al objeto actual en el que se está ejecutando un código. Su valor depende de cómo se invoca una función. Puede referirse al objeto que contiene el método que se está ejecutando o al objeto al que se hace referencia utilizando el operador de dot (.).
+
+    call: call es un método que se puede utilizar en una función para invocarla y establecer explícitamente el valor de this. Además de establecer this, puedes pasar argumentos separados por coma para ser utilizados por la función.
+
+    apply: apply es similar a call, pero los argumentos se pasan en forma de arreglo. También se utiliza para invocar una función y establecer this explícitamente.
+
+    bind: bind es un método que devuelve una nueva función con this vinculado al valor que se le pasa. No invoca la función inmediatamente, sino que crea una nueva función que puede ser llamada más adelante. También permite preestablecer argumentos en la nueva función.
+
+        const objeto = {
+        nombre: 'Juan',
+            decirHola: function() {
+                console.log('Hola, ' + this.nombre);
+            }
+        };
+
+        const otroObjeto = {
+        nombre: 'María'
+        };
+
+        objeto.decirHola(); // Salida: 'Hola, Juan'
+
+        objeto.decirHola.call(otroObjeto); // Salida: 'Hola, María'
+
+        objeto.decirHola.apply(otroObjeto); // Salida: 'Hola, María'
+
+        const nuevaFuncion = objeto.decirHola.bind(otroObjeto);
+        nuevaFuncion(); // Salida: 'Hola, María'
+
+    En el ejemplo anterior, objeto tiene un método decirHola que imprime un saludo utilizando el valor de this.nombre. Usando call y apply, podemos establecer this en otroObjeto y hacer que se imprima el saludo con el nombre de María. Con bind, creamos una nueva función nuevaFuncion que siempre tendrá this establecido en otroObjeto.
+
+    Recuerda que estas son explicaciones simplificadas de estos conceptos. En la práctica, su comportamiento puede ser más complejo y dependerá del contexto y el uso específico en tu código.
+}

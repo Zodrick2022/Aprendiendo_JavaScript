@@ -1,0 +1,8 @@
+<--Archivo HTML-->
+<a class="link-dom" href="dom.html" style="background-color: #F7D71E; color: #222;" data-id="1" data-descripcion="Document Object Model">
+//Archivo JavaScript
+const $linkDOM = document.querySelector(".link-dom")
+
+console.log($linkDOM.style)//nos trae todas las dependencias que tiene el objeto "style", y estan escritas con camellCase
+console.log($linkDOM.getAttribute("style"))//nos trae solo los estilos que tiene ".link-dom"
+console.log($linkDOM.style.backgroundColor)//llamamos backgroundColor que esta escrito en camellCase

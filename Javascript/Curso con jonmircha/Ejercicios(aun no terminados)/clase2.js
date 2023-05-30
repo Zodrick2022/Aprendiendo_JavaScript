@@ -6,13 +6,22 @@
 */
 //----------EJERCICIO 5-------------
 
-function recibir(reverse1){
-    let invertido = "";
-    for(let i = reverse1.length - 1; i >= 0; i--){
-        invertido += reverse1.charAt(i)
-    }
-    console.log(invertido)
-}
+// function recibir(reverse1){
+//     let invertido = "";
+//     for(let i = reverse1.length - 1; i >= 0; i--){
+//         invertido += reverse1.charAt(i)
+//     }
+//     console.log(invertido)
+// }
 
-let reverse1 = prompt("Escribe una cadena de texto")
-recibir(reverse1)
+// let reverse1 = prompt("Escribe una cadena de texto")
+// recibir(reverse1)
+//----------EJERCICIO 6-------------
+// function coincidencia(text, text2){
+//     console.log("texto coincidencia: " + text.includes(text2))
+// }
+
+
+// let text = prompt("Escribe un texto")
+// let text2 = prompt("Escribe la coincidencia")
+// coincidencia(text,text2)
