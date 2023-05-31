@@ -1,0 +1,107 @@
+en el arreglo se pueden poner numeros, cadenas de texto, booleanos,hasta otro arreglo y objetos
+
+const b = [1, true, "Hola", ["A","B","C"]]
+para motrar un elemento del arreglo se hace lo siguiente
+-console.log(b[2])
+-salida = "Hola", siempre se empieza el arreglo desde 0 
+para motrar un elemeto de un arrglo dentro de otro arreglo se hace lo siguiente
+console.log(b[3][1])
+salida = "B"
+--------------------------------------------------------------
+agregar un nuevo elemento hacia el arreglo
+ const newArreglo = ["naranja","amarillo","azul"]
+
+ newArreglo.push("rojo") agregar un elemento "siempre lo pone alfinal del arreglo"
+ para quitar el ultimo elemento es
+
+ newArreglo.pop() //elimina el ultimo elemento
+----------------------------------------------------------------
+newArreglo.forEach(function (e,index){
+    console.log(`<li id="${index}">${e}</li>`)
+})
+
+e = recorre el arreglo(elemento)
+index = muestra el numero de posiciones en la que estan
+
+salida = <li id="0">naranja</li>
+         <li id="1">amarillo</li>
+         <li id="2">azul</li>
+-------------------------------------------------------------------
+cambiar un elemento
+var courses = new Array("HTML", "CSS", "JS");
+courses[1] = "C++"; //cambiado el elemento css por c++
+console.log(courses)
+---------------------------------------------------------------------
+También puede declarar una matriz, decirle la cantidad de elementos que almacenará y agregar los elementos más tarde.
+var courses = new Array(3);//le decimos al Array cuantos espacios va a tener
+courses[0] = "HTML";//espacio 1
+courses[1] = "CSS";//espacio 2
+courses[2] = "JS";//espacio 3
+-----------------------------------------------------------------------
+Las matrices de JavaScript son dinámicas, por lo que puede declarar una matriz y no pasar ningún argumento con el constructor Array()
+var courses = new Array();
+courses[0] = "HTML";
+courses[1] = "CSS";
+courses[2] = "JS";
+courses[3] = "C++";
+-------------------------------------------------------------------------
+ejercicio de sololearn
+function main() {
+    //take the number of passed levels
+    var levels = parseInt(readLine(),10);
+    var points = new Array();
+    
+    var count = 0;
+    while(count<levels){
+        var elem = parseInt(readLine(),10);
+        points[count] = elem;
+        count++;
+    }
+    
+    var sum = 0;
+    //calculate the sum of points 
+    for(let i = 0; i < points.length; i++){
+        sum += points[i]
+    }
+
+    //output
+    console.log(sum);
+}
+/*La primera entrada representa el número de niveles pasados, 
+en este caso, 3 (el tamaño de una matriz que se creará). 
+Las siguientes 3 entradas son los puntos otorgados al jugador por 
+pasar cada nivel. El jugador ganó 1+4+8 puntos por 3 niveles pasados, 
+que luego se emiten.*/
+----------------------------------------------------------------------------
+matrices asociativas
+Si bien muchos lenguajes de programación admiten matrices con índices con nombre (texto en lugar de números), llamadas matrices asociativas , JavaScript no lo hace .
+Sin embargo, aún puede usar la sintaxis de matriz con nombre, que producirá un objeto.
+Por ejemplo:
+
+var person = []; //empty array
+person["name"] = "John";
+person["age"] = 46;
+document.write(person["age"]);
+
+Ahora, el personse trata como un objeto, en lugar de ser una matriz.
+Los índices nombrados namey agese convierten en propiedades del personobjeto.
+
+Como la personmatriz se trata como un objeto, los métodos y las propiedades de la matriz estándar producirán resultados incorrectos. Por ejemplo, person.lengthdevolverá 0.
+------------
+producto ayacente mas grande (Queremos encontrar el par de números consecutivos en el arreglo que tenga el mayor producto.)
+function productoAdyacenteMasGrande(arreglo) { 
+  let productoMaximo = -Infinity; // Inicializamos con infinito negativo para hacer un seguimiento del producto máximo, esto nos permite comparar los productos y asegurarnos de que el primer producto que encontremos sea mayor
+
+  for (let i = 0; i < arreglo.length -1; i++) {//recorremos el arreglo, epezamos desde el primer número y vamos avanzando de uno en uno hasta llegar al penúltimo número del arreglo
+    let producto = arreglo[i] * arreglo[i + 1];//calculamos el producto de ese numero con el siguiente numero del arreglo 
+    if (producto > productoMaximo) {//si el producto es mayor s el valor de productoMaximo
+      productoMaximo = producto;//alamacenamos en productoMaximo el resultado de producto
+    }
+  }
+
+  return productoMaximo;//retornamos productoMaximo
+}
+
+let arreglo = [1, 2, 3, 4, 5, 6];
+let resultado = productoAdyacenteMasGrande(arreglo);//recibe el arreglo de la variable "arreglo"
+console.log(resultado); // Salida: 30 (ya que el mayor producto es 5 * 6)

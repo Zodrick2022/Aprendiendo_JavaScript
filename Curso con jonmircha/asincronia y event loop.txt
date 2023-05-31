@@ -1,0 +1,28 @@
+la respuesta sucede en un futuro
+no espera el resultado
+---------------------------------------------------------------------------
+(asincronia
+    Imagina que estás jugando con tus amigos. Deciden hacer una carrera y cada uno tiene que correr hasta un árbol y luego volver. En lugar de correr uno detrás del otro, todos comienzan a correr al mismo tiempo. Cada uno tiene su propia velocidad y no esperan a que los demás terminen para volver. Pueden correr, llegar al árbol y volver al mismo tiempo. Esto es como la asincronia en JavaScript.
+
+    En JavaScript, cuando tienes tareas que llevan tiempo, como cargar una imagen desde internet o hacer una solicitud a un servidor, en lugar de detener todo el programa y esperar a que se complete esa tarea, puedes decirle a JavaScript que continúe haciendo otras cosas mientras espera. Por ejemplo, puedes pedirle a JavaScript que cargue una imagen y, mientras tanto, puedes mostrar otros elementos en tu página web o hacer otras cosas importantes.
+
+    Cuando la tarea asíncrona se completa, JavaScript te avisa para que puedas manejar el resultado. Es como si tu amigo que corre te avisa cuando llega al árbol y vuelve. Puedes hacer algo con esa información, como mostrar la imagen en tu página web o realizar alguna acción basada en los datos que obtuviste.
+
+    La asincronia en JavaScript es muy útil porque te permite realizar múltiples tareas al mismo tiempo sin bloquear todo el programa. Esto hace que tu aplicación sea más rápida y eficiente.
+)
+(event loop
+    Imagina que estás en un parque de diversiones con muchas atracciones diferentes, como montañas rusas, carruseles y juegos. Cada atracción tiene una fila de personas esperando para subir. El event loop es como un encargado del parque que se asegura de que todos tengan la oportunidad de disfrutar de las atracciones sin tener que esperar demasiado.
+
+    El event loop en JavaScript funciona de manera similar. Imagina que tienes un programa que tiene muchas tareas para hacer. Algunas de estas tareas son rápidas y otras son más lentas. El event loop es como ese encargado del parque que se asegura de que todas las tareas se realicen de manera justa y eficiente.
+
+    Cuando tu programa inicia, el event loop toma una tarea y la ejecuta. Si la tarea es rápida, se completa rápidamente y el event loop pasa a la siguiente tarea. Pero si la tarea lleva tiempo, como cargar una imagen grande o hacer una solicitud a un servidor, el event loop no se queda esperando, sino que pasa a la siguiente tarea mientras espera que la tarea lenta se complete.
+
+    Cuando la tarea lenta finalmente se completa, el event loop la toma de nuevo y realiza las acciones necesarias con los resultados obtenidos. Es como si el encargado del parque te avisa cuando llega tu turno en una atracción y te permite disfrutar de ella. Una vez que terminas, el event loop pasa a la siguiente tarea en la lista y así sucesivamente.
+
+    El event loop en JavaScript se asegura de que todas las tareas se realicen de manera justa y que el programa siga funcionando sin bloquearse. Es como el encargado del parque de diversiones que se asegura de que todos tengan la oportunidad de divertirse y nadie tenga que esperar demasiado.
+)
+(
+    La asincronia y el event loop trabajan juntos para asegurar que el programa sea eficiente y no se bloquee mientras se manejan tareas que llevan tiempo. El event loop permite que se ejecuten múltiples tareas de manera concurrente y se encarga de coordinar su ejecución en el momento adecuado.
+
+    Así que sí, la asincronia y el event loop están muy relacionados. El event loop es el mecanismo central que permite que la asincronia funcione de manera suave en JavaScript, asegurándose de que todas las tareas se realicen sin bloquear la ejecución del programa.
+)

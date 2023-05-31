@@ -1,0 +1,21 @@
+alert("Hola soy una alerta")//solo tiene un boton de aceptar
+confirm("Hola esto es una confirmacion")//la diferencia de confirm a alert es que confirm tiene dos botones de aceptar y cancelar
+prompt("Hola esto es un prompt(aviso)")//permite al usuario ingresar un valor
+-------------------------------------------------------
+valor por defecto
+alert = undefined
+confirm = true(si se presiona aceptar), false(si se presiona canselar)
+prompt = (cadena vacia si no se coloca nada), null(si coloca algo dentro de la caja pero despues presiona el boton cancelar) (todo lo convierte a cadena de texto)
+-------------------------------------------------------
+//Para colocar comillas dobles o simples en la cadena de texto se hace lo siguiente
+console.log("Tu dices: \"SIUUUUUU\"")
+console.log('Tu dices: \"SIUUUUUU\"')
+console.log("Tu dices: \'SIUUUUUU\'")
+console.log('Tu dices: \'SIUUUUUU\'')
+// esto dr llama caracter escapado => \
+------------------------------------------------------
+\n -> salto de linea 
+\t -> agregar un tap
+------------------------------------------------------
+let nombre = "Eduard", apellido = "paredes", edad = 18
+console.log(`Hola minombre es %s %s y tengo %s años`,nombre,apellido,edad)//%s son comodines y alfinal del texto le decimos a los comodines que los cambie por los valores que tienen las variables nombre,apellido,edad

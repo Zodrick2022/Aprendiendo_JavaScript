@@ -1,0 +1,71 @@
+Una function es un bloque de codigo, autocontenido,que se puede definir una vez y ejecuar en cualquier momento. Opcionalmente, una funcion puede aceptar parametros y devolver un valor
+
+las funciones en JavaScript son objetos, un tipo especial de objetos
+
+Funcion declarada
+function estoEsUnaFuncion(){
+    console.log("Hola")
+}
+invocacion de Funcion
+estoEsUnaFuncion()
+-------------------------------------------------
+Retonar valores
+function estoEsUnaFuncion(){
+    console.log("Hola")
+    return "Mundo" //despues del return, si tiene mas lineas de codigo seran ignorados
+    por el return
+}
+
+invocacion de Funcion
+let nombreFun = estoEsUnaFuncion() //siempre se asigna a una variable cuado vaya a retorna un valor string o numerico(cuando utilize un return)
+console.log(nombreFun)
+--------------------------------------------------------------
+Aceptar parametros
+funcion saludar(nombre,edad){
+    console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años`)
+}
+
+saludar("Eduard",18)
+saludar() si no escribimos nada, los valores pasan a ser undefined, si queremos cambiar el undefined por otra cosa hacemos lo siguiente
+function saludar(nombre = "Desconocido", edad = 0) asi los valores no se declaran "undefined" si no estos pasan hacer "Desconocido" y 0
+--------------------------------------------------------------
+Funcion expresada
+
+const funcionExpresada = function(){
+    console.log("Esto es una funcion expresada, es decir, una funccion que se le ha asignado como valor a una variable,si invocamos esta funcion antes de su definicion JavaScript nos dira `Cannot access nombre de la funcion before initialization` es decir un error")
+}
+
+funcionExpresada()
+------------------------
+el area de un poligono
+function solution(n) {
+    return (n-1)*(n-1)+n*n;
+}
+let n = Number
+solution(n)
+
+--(n-1)*(n-1) calcula el cuadrado del número "n" disminuido en 1. Es decir, resta 1 a "n" y luego eleva al cuadrado el resultado.
+
+--n*n calcula el cuadrado del número "n".
+
+--Finalmente, se suman los resultados obtenidos en los pasos anteriores para obtener el resultado total de la expresión.
+-------------------------
+
+function solution(statues) {
+    if(statues.length > 1){
+        statues.sort((a, b) => a - b); // Ordenar statues de menor a mayor
+        let statuesAdicionales = 0;
+
+        for (let i = 1; i < statues.length; i++) {//recorrer el arreglo
+            const diferencia = statues[i] - statues[i - 1] - 1; //Calcula la diferencia entre la estatua actual (estatuas[i]) y la estatua anterior (estatuas[i - 1]). Restamos 1 para verificar si la diferencia es mayor a 0 (ya que queremos que la estatua actual sea exactamente 1 más grande que la estatua anterior).
+            statuesAdicionales += diferencia > 0 ? diferencia : 0;// Incrementa el contador estatuasAdicionales por la diferencia si es mayor a 0. En caso contrario, no se suma nada al contador.
+    }
+
+  return statuesAdicionales;
+}
+    else if(statues.length == 1){
+        return 0       
+    }
+}
+const statues = []
+solution(statues)

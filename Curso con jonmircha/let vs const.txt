@@ -1,0 +1,2 @@
+-si en el flujo del codigo la variable siempre cambia de valor es mejor ustilizar let(numericos, strings, boleanos, null, undefined)
+-si en el flujo del codigo la variable nunca cambia de valor es mejor utilizar const(objetos, arreglos)

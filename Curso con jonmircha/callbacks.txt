@@ -1,0 +1,16 @@
+Un callback en JavaScript es como pedirle a JavaScript que haga algo y te avise cuando haya terminado. Es muy útil para manejar tareas asíncronas y ejecutar código en el momento adecuado.
+{callbacks hell(mala practica)
+
+    Imagina que tienes un juego de construcción muy grande con muchas piezas, y cada pieza tiene una instrucción que debes seguir. Para armar el juego, tienes que seguir todas las instrucciones en orden. Pero algunas de estas instrucciones requieren que esperes a que alguien más termine una tarea antes de poder continuar con la siguiente instrucción. Entonces, tienes que pedirle a esa persona que te avise cuando termine, para que puedas continuar con el juego.
+
+    En JavaScript, cuando tienes muchas tareas asíncronas que dependen unas de otras, y tienes que usar callbacks para manejarlas, puedes encontrarte en una situación llamada "callbacks hell" (infierno de callbacks). Esto sucede cuando tienes muchos callbacks anidados, uno dentro del otro, lo cual puede hacer que el código sea difícil de leer y mantener.
+
+    hacerAlgo(function() {
+        hacerOtraCosa(function() {
+            hacerAlgoMas(function() {
+             // Y así sucesivamente...
+            });
+        });
+    });
+
+}

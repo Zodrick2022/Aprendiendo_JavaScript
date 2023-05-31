@@ -1,0 +1,18 @@
+Elementos del DOM
+console.log(window.document)//ventana windows
+console.log(document)//ventana windows
+console.log(document.head)//etiqueta head
+console.log(document.body)//etiqueta body
+console.log(document.documentElement)//todo el html
+console.log(document.doctype)//tipo de documento
+console.log(document.charset)//juego de caracteres
+console.log(document.title)//etiqueta title
+console.log(document.links )//lista de enlaces que tiene una pagina web 
+console.log(document.images)//lista de imagnes que tiene una pagina web
+console.log(document.forms)//formularios
+console.log(document.styleSheets)//coleccion de hojas de estilo que tiene el documento
+console.log(document.scripts//todos los documentos de JavaScript)
+setTimeout(()=>{//por que en un setTimeout, por que al recargar la pagina no nos da tiempo de seleccionar el contenido que queremos
+    console.log(document.getSelection().toString())
+},3000)//depues de tres segundos que nos muestre por consola lo que hemos seleecionado
+console.write("escribir en la pagina desde JavaScript")

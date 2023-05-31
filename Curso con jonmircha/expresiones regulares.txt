@@ -1,0 +1,24 @@
+https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_expressions
+//aqui encontraras todos las expresiones regulares 
+//donde dice "Usar caracteres especiales" esta una tabla con todos los caracteres/construcciones y los links donde puedes buscar informacion a fondo
+//donde dice "Búsqueda avanzada con banderas" hay 6 simbolos para agregar a la expresion regular y tambien nos dan una breve descripcion de que hace cada una de las banderas
+--------------------------------------------------------------------
+//es una expresion que nos ayuda a encontrar diferentes patrones de texto
+//hay dos maneras en crear expresiones regulares
+let cadena ="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem fuga cupiditate dolores saepe, praesentium sit eaque recusandae id sapiente similique, laudantium voluptatum perferendis ea iure ad odio doloremque earum voluptate"
+//primera manera
+let expReg = new RegExp("lorem","ig")//patron a buscar, pide 2 paramentros, dame el patron y banderas, las bandras son comodines pequeñas modificaciones que le podemos agregar a nuestra expresion regular
+//segunda manera
+let expReg = /lorem/ig
+
+console.log(expReg.test(cadena))//probar que la expresion regular exista en la cadena(devuelve un booleano =>"verdadero o falso")(este sirve para las validaciones)
+console.log(expReg.exec(cadena))//nos devuelve un arreglo y uno de sus atributos (index) nos dice en que ultima posicion se contro la expresion regular(coincidencia)
+/*la mejor manera es la segunda*/
+
+let expReg = /lorem{1,2}/ig//donde estan los corchetes decimos que almenos 1 o 2 veces se va a encontrar la coincidencia
+let expReg = /lorem{1,}/ig//pero si estamos definiendo un numero especifico y no definimos el segundo, esto va dar a entender que se puede repetir indefinidamente
+let expReg = /lorem{3,}/ig//en este caso la salida es false, ya que estamos diciendo"oye almenos el lorem se va arepetir 3 veces o incluso mas", pero en realidad se repite 2 veces, espor eso que la salida es false
+/*en realidad no nos vamos a meter mucho en esto es por eso que nuestro apoyo para encontrar las expresiones regulares es google*/
+
+
+

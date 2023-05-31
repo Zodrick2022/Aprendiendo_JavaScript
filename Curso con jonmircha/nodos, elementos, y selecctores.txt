@@ -1,0 +1,8 @@
+console.log(document.getElementsByTagName("li"))//seleccionar todas los etiquetas "li" que tiene el domn, reemplazado por querySelector
+console.log(document.getElementsByClassName("name"))//traer las etiquetas con la misma clase que tienen, reemplazado por querySelector
+console.log(document.getElementsByName("nombre"))//traer los etiquetas con el mismo nombre, reemplazado por querySelector
+console.log(document.getElementById("menu"))//traer todos las etiquetas que tiene el mismo id 
+console.log(document.querySelector("menu"))//combinacion de getElementsByClassName,getElementsByName,getElementsByTagName
+console.log(document.querySelectorAll("a"))//seleccionar todas los etiquetas "a"
+tembien se puede poner el .length
+console.log(document.querySelector("a")//seleccionar una etiqueta "a")

@@ -1,0 +1,88 @@
+console.error("Esto es un error") //muestra por consola un error con la cadena de texto que especifiquemos
+console.log(console)//muestra todas las caracteristicas que tiene la consola
+console.warn("Esto es una alerta")//mostrara una alerta en la consosla
+alert("Esto e una alerta")//mostrar por la ventana la alerta
+console.info("Esto es un mensaje informativo")//es como lo mismo de console.log
+console.log("Un registro de lo que ha pasado en nuestra aplicacion")
+console.clear()//limpiar todo lo que este dentro de la consola
+console.log(window)//muestra todas las caracteristicas que tiene la ventana
+console.log(document)//muestra todas las etiquetas del documento HTML.
+console.dir(document)//muestra todas las caracteristicas que tiene el documento
+--------------------------------------------------------------------
+//grupos con consola
+console.group("Meses de 2023")//inicio grupo
+console.log("Enero")
+console.log("Febrero")
+console.log("Marzo")
+console.log("Abril")
+console.log("Mayo")
+console.log("Junio")
+console.log("Julio")
+console.log("Agosto")
+console.log("Septiembre")
+console.log("Octubre")
+console.log("Novienbre")
+console.log("Diciembre")
+console.groupEnd()//fin grupo
+-----
+//agrega el triangulo del despliegue
+console.groupCollapsed("Meses de 2023")//inicio grupo
+console.log("Enero")
+console.log("Febrero")
+console.log("Marzo")
+console.log("Abril")
+console.log("Mayo")
+console.log("Junio")
+console.log("Julio")
+console.log("Agosto")
+console.log("Septiembre")
+console.log("Octubre")
+console.log("Novienbre")
+console.log("Diciembre")
+console.groupEnd()//fin grupo
+//en la consola de chrome le agrega el triangulo a group, pero si estamos en diferentes consolas de los navegadores groupCollapsed hace que le agregue ese triangulo para el desplique
+--------------------------------------------------------------------
+//tablas(solo se puede con objetos y arreglos)
+//objeto (no creado)
+console.table(Object.entries(console).sort())//Object.entries->aqui le estamos diciendo a la consola que ponga todas las entrardas del objeto en cuestion y que las ordene de a hasta la z(sort())
+------
+//objeto (creado)
+const persona = {
+    nombre: "Eduard",
+    apellido: "Paredes",
+    edad: 18,
+    ciudad: "Bogota",
+    soltero: true
+}
+console.table(persona)//muestra los atributos y los valores
+------
+//arreglos(arrays)
+let nombre = "Eduard"
+let apellido = "Paredes"
+let edad = 18
+let nacionalidad = "Colombiano"
+const aver = [nombre,apellido,edad,nacionalidad]
+console.table(aver)//muestra las pociciones y los valores
+--------------------------------------------------------------------
+//tiempo
+//cuanto tiempo tarda "este bloque" con codigo en ser ejecutado
+console.time("tiempo")//inicio, etiqueta "tiempo"
+const arreglo = Array(1000000) //creamos una arreglo que contenga 1 millon de pociciones pero que este vacio
+for(let i = 0;i < arreglo.length/*mientras que i sea menor a las pociciones del arreglo*/;i++){
+    arreglo[i] = i //que en cada pocicion que este i dentro de arreglo coloque el numero i (primera posicion  0 = primer valor 0.....)
+}
+console.timeEnd("tiempo")//fin, tiene que etiquetarse de la misma manera de inicio a fin
+//console.log(arreglo)//mostrar arreglo
+--------------------------------------------------------------------
+//contador
+for(let i = 0; i <= 100; i++){
+    console.count("codigo for")//contar cuantas veces se ejecuta el ciclo for
+    console.log(i)
+}
+--------------------------------------------------------------------
+//prueba
+let x = 3, y = 2, prueba = "Se espera que X siempre sea menor que Y"
+console.assert(x < y,prueba)//condicion
+--------------------------------------------------------------------
+let nombre = "jon", apellido = "mircha", edad = 35
+console.log(`Hola minombre es %s %s y tengo %s años`,nombre,apellido,edad)//%s son comodines y alfinal del texto le decimos a los comodines que los cambie por los valores que tienen las variables nombre,apellido,edad
