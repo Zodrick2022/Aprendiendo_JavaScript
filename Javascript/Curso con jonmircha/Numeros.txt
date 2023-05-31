@@ -15,4 +15,4 @@ let a = "Hola Mundo"
 let b = 2
 console.log(typeof a, typeof b)
 salida = string number
-Lo que hace typeof es decirnos si el valor es un numero o una cadena de texto
+Lo que hace typeof es decirnos si el tipo de dato es un numero,un array, una function, un objeto o una cadena de texto

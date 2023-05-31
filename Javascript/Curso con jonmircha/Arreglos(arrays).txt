@@ -87,3 +87,21 @@ Ahora, el personse trata como un objeto, en lugar de ser una matriz.
 Los índices nombrados namey agese convierten en propiedades del personobjeto.
 
 Como la personmatriz se trata como un objeto, los métodos y las propiedades de la matriz estándar producirán resultados incorrectos. Por ejemplo, person.lengthdevolverá 0.
+------------
+producto ayacente mas grande (Queremos encontrar el par de números consecutivos en el arreglo que tenga el mayor producto.)
+function productoAdyacenteMasGrande(arreglo) { 
+  let productoMaximo = -Infinity; // Inicializamos con infinito negativo para hacer un seguimiento del producto máximo, esto nos permite comparar los productos y asegurarnos de que el primer producto que encontremos sea mayor
+
+  for (let i = 0; i < arreglo.length -1; i++) {//recorremos el arreglo, epezamos desde el primer número y vamos avanzando de uno en uno hasta llegar al penúltimo número del arreglo
+    let producto = arreglo[i] * arreglo[i + 1];//calculamos el producto de ese numero con el siguiente numero del arreglo 
+    if (producto > productoMaximo) {//si el producto es mayor s el valor de productoMaximo
+      productoMaximo = producto;//alamacenamos en productoMaximo el resultado de producto
+    }
+  }
+
+  return productoMaximo;//retornamos productoMaximo
+}
+
+let arreglo = [1, 2, 3, 4, 5, 6];
+let resultado = productoAdyacenteMasGrande(arreglo);//recibe el arreglo de la variable "arreglo"
+console.log(resultado); // Salida: 30 (ya que el mayor producto es 5 * 6)

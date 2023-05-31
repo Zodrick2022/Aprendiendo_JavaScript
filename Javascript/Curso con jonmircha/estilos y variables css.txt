@@ -2,7 +2,43 @@
 <a class="link-dom" href="dom.html" style="background-color: #F7D71E; color: #222;" data-id="1" data-descripcion="Document Object Model">
 //Archivo JavaScript
 const $linkDOM = document.querySelector(".link-dom")
-
+----
 console.log($linkDOM.style)//nos trae todas las dependencias que tiene el objeto "style", y estan escritas con camellCase
 console.log($linkDOM.getAttribute("style"))//nos trae solo los estilos que tiene ".link-dom"
-console.log($linkDOM.style.backgroundColor)//llamamos backgroundColor que esta escrito en camellCase
+console.log($linkDOM.style.backgroundColor)//llamamos backgroundColor que esta escrito en camellCase y que no esta en ".link-dom"
+----
+agregar estilos css desde JavaScript(hay 2 formas)
+//forma 1
+$linkDOM.style.setProperty("text-decoration","none")//dentro del atriubuto styile de linkDOM se va agregar una propiedad de "text-decoration" y el valor que va a recibir es "none"
+$linkDOM.style.setProperty("display","block")
+
+//forma 2
+$linkDOM.styile.width = "50%" //dentro del atriubuto styile de linkDOM se va agregar una propiedad de un "width" y el valor que va a recibir es de "50%"
+$linkDOM.styile.textAling = "center"
+------------------
+Variables CSS - Custom Properties CSS(manejo de estilos CSS)
+---------------
+//Archivo html
+<style>
+:root{//que las variables css esten disponibles en todos los selectores del documento html
+    --yellow-color:#F1DF1E;//color amarillo
+    --dark-color:#222;//color negro tirando a gris
+}
+</styile>
+
+---------------
+const $html = document.documentElement, $body = document.body//estamos diciendo que el html y el body se guarden en las variables "$html" y "$body"
+let varDarkcolor = getComputedStyle($html).getPropertyValue("--dark-color"),
+varYellowColor = getComputedStyle($html).getPropertyValue("--yellow-color")//estamos diciendo dentro de la estiqueta html esta unos atriubutos llamados "--dark-color" y "--yellow-color" y los asigna a una variable varDarkcolor y varYellowColor
+
+//console.log(varDarkcolor, varYellowColor) enseña por consola los valores de los atributos "--dark-color" y "--yellow-color"
+
+$body.styile.backgroundColor = varDarkcolor //que body que en los estilos se le va a asignar dentro del atributo backgroundColor el valor de varDarkcolor
+$body.styile.color = varYellowcolor
+
+----------------
+//como modificar algunas de las Variables
+$html.styile.setProperty("--dark-color","#000")//ojo, aqui el nuevo valor lo esta aplicadon pero como el body tiene otro color no se nota(solo sale el valor de la propiedad, cambio dinamicamente)
+
+varDarkcolor = getComputedStyle($html).getPropertyValue("--dark-color")//actualizamos el valor de la variable varDarkcolor por el style del "$html"
+$body.styile.setProperty("background-color",varDarkcolor)//actualizamos la variable "$body" y que utilize el nuevo valor de varDarkcolor 
