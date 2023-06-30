@@ -1,0 +1,54 @@
++ sumar
+- restar
+* multiplicar
+/ dividir
+% residuo de la divicion(modulo)
+** exponenciacion
+--------------------------------------------------------------
+let a = 5
+let b = 2 //tambien se epuede con decimales jemplo X = 9 y Y = 1/2 salida = 3(rais cuadrada de 9)
+console.log(a**b)//exponenciacion de dos numero
+salida = 25
+--------------------------------------------------------------
+() cuando haya una operacion dentro de parentesis este se va a ejecutar primero
+---------------------------------------------------------
+operadores relacionales
+< menor
+> mayor
+>= mayor igual
+<= menor igual
+= es asignacion de variable (let a = 4)
+== igual de comparacion de valores (4 == 5)
+=== "estrictamente" igual o igualdad estricta es decir, igual de tipo de dato y de valores (5 === 5; salida: true) (5 === "5"; salida: false) siempre utilizar la comparacion de 3 iguales
+!= diferente
+!== "super" diferente
+---------------------------------------------------------------
+incremento y decremento (+,-,*,/)
++= incremento (se suma al valor)
+-= decremento (se elimina al valor)
+*= decremento (se multiplica al valor)
+/= decremento (se divide al valor)
+
+en vez de hacer esto:
+let i =  2
+i = i + 2 //en esta linea hay se simplifica
+hacemos esto:
+let i = 2
+i += 2//esta linea esta simplificada
+------------------------------------------------------------------
+operdador unario
+++ (se suma 1 al valor , solo con variables)
+-- (se elimina 1 al valor, solo con variables)
+let i = 0
+i++
+console.log(i)
+salida = 1
+---------------------------------------------------------------
+para que podamos sumar uno dentro de un
+console.log(++i) esta bien escrito "funciona y muestra el valor incrementado"
+console.log(i++) esta mal escrito "muestra el valor original pero no el valor incrementado"
+--------------------------------------------------------------
+operadores logicos
+! = Not (no): Niega, es decir lo que es verdadero lo vuelve falso y viceversa
+|| = Or (o): Cuando tengo 2 o mas condiciones, con que una se cumpla, es decir sea verdadera, el || se valide
+&& = And (y): Cuando tengo 2 o mas condiciones, todas deben cumplirse, es decir ser verdadesras para que && se valide

@@ -1,0 +1,39 @@
+ .card{
+    display: inline-block;
+}
+
+.card figcaption{
+    padding: 1rem;
+}
+
+.rotate-45{
+    transform: rotate(45deg);
+}
+
+.rotate-135{
+    transform: rotate(135deg);
+}
+
+.opacity-80{
+    opacity: .8;
+}
+
+.sepia{
+    filter: sepia(1);
+}
+const $card = document.querySelector(".card")//trae el primer objeto que contenga la clase "card"
+
+console.log($card)
+//traer el nombre de la clase del primer objeto
+console.log($card.className)
+//traer DomTokenList 
+console.log($card.classList)
+//traer un buleano para saber si tiene esa clase o no
+console.log($card.classList.contains("rotate-45"))// en este caso va salir false ya que no lo contiene el $card
+$card.classList.add("rotate-45")//agregar una clase a $card, para agregar mas clases se hace por comas, ejemplo, ("rotate-45","opacity-80") asi se agrega mas clases
+$card.classList.remove("rotate-45")//eliminar una clase a $card, para eliminar las clases se hace por comas, ejemplo, ("rotate-45","opacity-80") asi se elimina las clases
+//toggle, si el $card tiene la clase "a" se la elimina pero si no tiene la clase "a" se la agrega
+$card.classList.toggle("rotate-45") //en este caso no tiene la clase "rotate-45" asi que lo agrega
+$card.classList.toggle("rotate-45") //en este caso tiene la clase "rotate-45" asi que lo elimina
+esto nos puede ayudar hacer un boton que cambio de modo oscuro a modo claro(dark mode), (toggle funciona como una palanca)
+$card.classList.replace("rotate-45","rotate-135")//reemplazar las clases ("parametro 1, a reemplazar","parametro 2, el reemplazo")

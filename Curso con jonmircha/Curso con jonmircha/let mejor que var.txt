@@ -1,0 +1,33 @@
+var causa una variable global
+let no causa una variable global
+-----------------------------------------------------
+mala practica
+var hola= "hola mundo"
+{//La logica seria que dentro de las llaves solo exite un hola con "hello world" y una unica variable hola con "hola mundo"
+    var hola = "hello world"
+}
+//pero la cosa no es haci, yo quiero mostrar la primera variable hola con la cadena de texto "hola mundo" pero que es lo que pasa?? lo que pasa es que se genera una variable GLOBAL si yo imprimo en pantalla quiero que salga "hola mundo" el resultado siempre va hacer "hello world"
+------------------------------------------------------
+Buena practica
+let hola = "hola mundo"
+{
+    let hola = "hello world"
+    console.log(hola) //aqui siempre va a mostrar "hello world"
+}
+console.log(hola) //aqui siempre va a mostrar "hola mundo"
+-------------------------------------------------------------------
+ejemplo
+var num = 12
+{//bloque
+    var num = 35253465
+}
+
+console.log(num)//aqui quiero traer la variable num con el que esta definido 12 pero como var es golbal, es decir, no respeta los bloques, se actualiza y trae el ultimo valor especificado de num
+//con let
+let num1 = 15
+{//bloque
+    let num1 = 1243235 //dentro del bloque solo existe num1 con el valor 1243235
+    console.log("llamando a num1 dentro de un bloque: " + num1)
+}
+
+console.log(num1)//trea el valor 15

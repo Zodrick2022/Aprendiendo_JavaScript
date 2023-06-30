@@ -1,0 +1,34 @@
+DOM:Document Object Model
+BOM:Browser Object Model(ya casi no se utiliza)
+CSSOM: CSS Object Model(una pequeña parte del DOM)
+
+WEB APIs(casi todas las APIs se encuentran documentadas en MDN Web docs)
+Eventos
+Forms
+AJAX - Fetch
+History
+Web Storage Geolocation
+Drag & Drop
+indexed DB
+Canvas
+MartchMedia
+etc
+----
+let texto = prompt("Escribe un texto a \"escuchar\"")
+const hablar = (texto) => speechSynthesis.speak(new speechSynthesisUtterance(texto))
+
+hablar(texto)
+//---decir lo que escribes(jonmircha)
+// let texto = prompt("Escribe un texto a \"escuchar\"")
+// const hablar = (texto) => speechSynthesis.speak(new SpeechSynthesisUtterance(texto))
+// hablar(texto)
+//---escuchar lo que dices(midudev)desde consola
+// const escuchando = new webkitSpeechRecognition()
+// escuchando.lang = 'es-ES'
+// escuchando.continuous = true
+// escuchando.onresult = event => {
+//     for(const result of event.result){
+//         console.log(result[0].transcript)
+//     }
+// }
+// escuchando.start()

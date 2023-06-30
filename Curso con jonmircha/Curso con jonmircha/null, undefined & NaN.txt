@@ -1,0 +1,21 @@
+undefined indica que no se ha inicializado una variable y que el valor esta ausente
+
+Es el valor por default que se le asigna a una variable que esta sin definir aun. Aunque también existe una propiedad global "undefined" que representa uno de los valores primitivos de JS.
+
+let indefinida;
+console.log(indefinida)
+salida = undefined
+--------------------------------------------------------------------
+null es un valor especial que indica la aucencia de un valor (este es colocado intencionalmente por o el y/o los programador(es))
+
+representa intencionalmente un valor nulo o "vacío"
+
+let nulo = null;
+console.log(nulo)
+-----------------------------------------------------------------
+NaN Not a Number (No es un Numero)
+
+let NoEsUnNumero = "hola" * 3
+console.log(NoEsUnNumero)
+salida = NaN
+por que sale como respuesta NaN por que como tal la cadena de texto no es un numero

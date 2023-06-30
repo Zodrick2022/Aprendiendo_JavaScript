@@ -1,0 +1,18 @@
+let a = 7.19
+console.log(c.toFixed(1)) en este caso el 7.19 lo redondea a 7.2
+salida = 7.2 
+console.log(c.toFixed(5)) en este caso decimos cuantos numeros decimales va a tener la variable c
+salida = 7.19000
+-------------------------------------------------------------
+let c = "6.5"
+console.log(parseInt(c)) aqui estamos combirtiendo la cadena de texto 6.5 a 6 y por que solo 6?? por que solo combiente los numeros enteros
+salida = 6
+para que combierta la cadena de texto 6.5 a numeros decimales hacemos lo siguiemte
+console.log(parseFloat(c))
+salida = 6.5
+-------------------------------------------------------------------
+let a = "Hola Mundo"
+let b = 2
+console.log(typeof a, typeof b)
+salida = string number
+Lo que hace typeof es decirnos si el tipo de dato es un numero,un array, una function, un objeto o una cadena de texto

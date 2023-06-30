@@ -1,0 +1,62 @@
+JavaScript es un lenguaje de scripting que inicialmente fue concebido para correr en navegadores, aunque hoy se puede utilizar también en el servidor de la mano de Node.JS.
+
+Cuando hablamos de ECMAScript, nos referimos al estándar que determina cómo emplear el lenguaje Javascript.
+
+La promesa es un objeto que representa la terminación o el fracaso de una operación asíncrona. Las Promesas se crean usando un constructor llamado Promise y pasándole una función que recibe dos parámetros, resolve y reject , que nos permiten indicarle a esta que se resolvió o se rechazó.
+
+Qué es el Strict Mode en JS ?
+El strict mode es una forma de elegir una variante restringida/estrica de JavaScript.
+
+Para escribir un programa usando Javascript se necesita: Un editor de textos sencillo.
+
+Los lenguajes Javascript y Java son lenguajes de programación que tienen en común:Que ambos usan objetos
+
+Los llamados scripts o guiones de las páginas web son: Programas creados con Javascritp o VBscript que se ejecutan en las páginas web.
+
+Cuando una página utiliza funciones escritas en Javascript, estas funciones se ejecutan: Pueden ejecutarse cuando son llamadas desde algún otro script o a causa de un evento.
+
+En Javascript se utilizan operadores para Relacionar dos o más valores produciendo un resultado.
+
+Los operadores binarios son operadores que Que operan a nivel de bit.
+
+En JavaScript, para darle el nombre a una variable, objeto o función, debemos tener en cuenta que:
+JavaScript diferencia entre mayúsculas y minúsculas
+Por tanto, las variables “pruebA” y “prueba” no son las mismas, cosa que no ocurre en otros lenguajes, para los que nuestras variables de ejemplo serían la misma.
+¿Cuál de estas instrucciones está correctamente escrita en Javascript?
+if (a==0) alert (a);//correcta
+if (a=0) print a;//incorrecta
+if (a==0) { print [a] }//correcta pero a la vez incorrecta
+if (a==0): print a;//incorrecta
+
+No es necesario encerrar entre llaves cuando la sentencia que sigue al if tiene sólo una línea, y además, la comparación de igualdad se realiza con “==”. En la instrucción correcta, aparecería una ventana con el valor de la variable a.
+//nivel 2
+Cuando la ejecución de una o más instrucciones dependen del resultado de una comparación que puede dar mas de dos resultados usamos la sentencia de control switch ... case ... default
+
+Una instrucción o sentencia de control es una instrucción que Hace que los programas no se ejecuten de forma secuencial
+//nivel 3
+typeOf() significa el tipo de objeto es
+
+Cuando un programa en Javascript encuentra la instrucción "12" <= 12 ¿que ocurriría?
+Devolvería el resultado True
+avascript convierte la cadena "12" en el número 12 y luego realiza la comparación
+parseInt convierte cadenas a números enteros
+
+parseInt convierte cadenas a números enteros
+
+Tras ejecutarse la instrucción resultado = 6 << 1 la variable resultado condentrá el valor
+<< es un desplazamiento binario a izquierda, o sea, multiplicar por 2.
+
+En el siguiente código averigua que aparecería en la ventana alert
+   var vig1, vig2
+   if (vig1 > vig2)
+       alert("Primera posibilidad")
+   else
+       alert("Segunda posibilidad")
+Como vig1 no es mayor que vig2, ambas son iguales a 0
+//nivel 4
+Los evenos del navegador o del documento web son un Aviso lanzado por el navegador cuando ocurre algun cambio
+
+DHTML Una combinación de lenguajes: HTML, CSS y Javascript
+
+¿qué es el BOM?
+Un modelo de objetos que expone el navegador a Javascript.

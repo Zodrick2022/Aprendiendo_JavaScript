@@ -1,0 +1,28 @@
+console.log(document.documentElement.lang)//acceder al atributo lang del html
+console.log(document.documentElement.getAttribute("lang"))//acceder al atributo lang del html(esta es mejor)
+console.log(document.querySelector(".link-dom").href)//nostrae todo el link donde se encuentra "link-dom"
+console.log(document.querySelector(".link-dom").getAttribute("href"))//solo nos trae el archivo donde esta "link-dom"
+
+document.documentElement.lang = "en"//cambiando el valor de href de archivo
+console.log(document.documentElement.lang)
+---------
+document.documentElement.setAttribute("lang","es-CO")//cambiando el valor de href de archivo
+console.log(document.documentElement.lang)
+
+const $linkDOM = document.querySelector(".link-dom")//es una buena practica utilizar el "$" cuando trabajamos con el dom
+$linkDOM.setAttribute("target","_blank")//abra una nueva ventana con el mismo archivo
+$linkDOM.setAttribute("href","https://www.programiz.com/javascript/online-compiler/")//abra una nueva ventana pero con el link de un compilador de codigo para javascript
+-------
+para evitar sierto tipo de hackeo se hace lo siguiente
+$linkDOM.setAttribute("rel","noopener")//no hay una dependecia entre la nueva pagina con la pagina origen
+-------
+console.log($linkDOM.hasAttribute("rel"))//con hasAttribute nos "dice" que si un atributo esta en tal variable ,gracias a la linea 17 el atributo "rel" esta en $linkDOM, por ende la salida es true
+console.log($linkDOM.removeAttribute("rel"))//eliminacion del atributo "rel"
+
+//DATA-Attributes
+son atributos personalizados que puedes agregar en los elementos HTML para almacenar informacion adicional, estos atributos comienzan con el prefijo 'data-'seguido de un nombre especifico que elijas
+ejemplo: <div id="mi-elemento" data-info="valor de ejemplo" data-otro-dato="otro valor"></div>
+-------
+console.log($linkDOM.dataset.description)//llama al "data-" de "$linkDOM"
+$linkDOM.setAttribute("data-description","modelo de objeto del documento")//modificamos el "data-description" de "$linkDOM"
+console.log($linkDOM.dataset.description)

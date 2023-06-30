@@ -1,0 +1,33 @@
+{
+    Un iterable es un objeto que implementa el método Symbol.iterator. Este método devuelve un iterator, que es un objeto con un método next(). El método next() se utiliza para obtener el siguiente valor del iterable.
+
+    Un iterator es un objeto que sigue el protocolo de iteración y proporciona una forma de acceder secuencialmente a los elementos de un iterable(objetos, arreglos y cadenas de texto, sets y maps). El método next() del iterator devuelve un objeto con dos propiedades: value, que representa el siguiente valor del iterable, y done, que es un booleano que indica si se han recorrido todos los elementos del iterable.
+
+    const miIterable = {//objeto iterable
+        [Symbol.iterator]() {
+            let contador = 1;
+
+            return {
+                next() {//iterator
+                    if (contador <= 5) {
+                        return { value: contador++, done: false };
+                    } else {
+                        return { done: true };
+                    }
+                }
+            };
+        }
+    };
+
+    const miIterator = miIterable[Symbol.iterator]();
+
+    console.log(miIterator.next()); // { value: 1, done: false }
+    console.log(miIterator.next()); // { value: 2, done: false }
+    console.log(miIterator.next()); // { value: 3, done: false }
+    console.log(miIterator.next()); // { value: 4, done: false }
+    console.log(miIterator.next()); // { value: 5, done: false }
+    console.log(miIterator.next()); // { done: true }
+
+    miIterable es un objeto que implementa el método Symbol.iterator, y miIterator es el iterator obtenido al llamar a miIterable[Symbol.iterator](). Luego, puedes usar el método next() del iterator para obtener los valores del iterable hasta que se recorran todos los elementos.
+}
+

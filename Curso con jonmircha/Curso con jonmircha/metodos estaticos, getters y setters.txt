@@ -1,0 +1,56 @@
+class Animal{
+    constructor(nombre, genero){
+        this.nombre = nombre
+        this.genero = genero
+    }
+
+    //como se definen los metodos(funciones) en una clase?
+    sonar(){
+        console.log("Soy un gato y mi sonido es un maullido")
+    }
+    saludar(){
+        console.log(`hola me llamo ${this.nombre}`)
+    }
+    maullar(){
+        console.log("Miauuuu Miauuu !!!!")
+    }
+}
+//---que significa que una clase tenga atributos y metodos privados?, significa que dichos metodos y atributos solamente se van a poder utilizar dentro del cuerpo de la clase, es decir, utilizar un metodo privado dentro de otro metodo no privado en JavaScript
+class Perro extends Animal{
+    constructor(nombre, genero,tamanio){
+        super(nombre,genero)
+        this.tamanio = tamanio
+        this.raza = null//no ponemos raza = raza ya que no lo estamos llamando en el constructor y no lo definimos en el objeto, y se pone null 
+}
+    sonar(){
+        console.log("Soy un perro y mi sonido es un ladrido")
+    }
+    ladrar(){
+        console.log("Guauuu Guauuuu!!!!!")
+    }
+    //un metodo estatico se puede ejecutar sin necesidad de instanciar la clase, es decir, sin la nececidad de haber creado un objeto, yo podira ejecutar un metodo estatico
+    static queEres(){//con static convertimos un metodo que sea estatico
+        console.log("Los perros somos animales mamiferos que pertenecemos a la familia de los caninos. Somos considerados los mejores amigos del hombre")
+    }
+    //los setter y getters son metodos especiales que nos permiten establecer y obtener los valores de atributos de nustra clase (metodos obtenedores y establecedores)
+
+    get getRaza(){//metodo obtenedor
+        return this.raza//aqui estamos diciendo que obtenga el valor de la propiedad raza
+    }
+    //set espera un valor
+    set setRaza(raza){//metodo establecedor, modifica el valor de la propiedad raza
+        this.raza = raza//decir que raza le asignale y/o modifique el valor que va a obtener setRaza
+    }
+}
+Perro.queEres()//llamamos al metodo estatico
+
+perro = new Perro("hector","macho","pequeño")
+
+console.log(perro)
+perro.saludar()
+perro.sonar()
+perro.ladrar()
+//aun que get y set son metodos, para JavaScript son atributos 
+console.log(perro.getRaza)//la salida va hacer null ya que get solo esta recibiendo el valor, mas en este caso no lo modifica
+perro.setRaza = "Pit Bull"//modificamos el valor raza = null a raza = Pit Bull
+console.log(perro.getRaza)//la salida va hacer Pit Bull ya que depues del set el valor ya se modifico, de ser null a ser Pit Bull

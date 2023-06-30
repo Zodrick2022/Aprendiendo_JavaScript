@@ -1,0 +1,12 @@
+console.log(Math)//mostrar todos los metodos,propiedades de Math
+console.log(Math.PI)//mostrar el numero PI
+console.log(Math.abs(-7.8))//valor absoluto de un numero, sin considerar que sea positivo o negativo(siempre muestra el numero positivo)
+console.log(Math.ceil(7.8))//siempre redondea al numero mayor(7.8 => 8)
+console.log(Math.floor(7.8))//siempre redondea al numero menor(7.8 => 7)
+console.log(Math.round(7.8))//si tenemos 7.4, lo redondea a 7,pero si tenemos 7.5,lo redondea a 8
+console.log(Math.sqrt(12))//raiz cuadrada de un numero
+console.log(Math.pow(2,5))//elevar el segundo numero a la potencia del primer numero
+console.log(Math.sing(-6))//devuelve -1 si el numero es negativo, devuelve 1 si el numero es positivo y devuelve 0 si el numero es 0
+console.log(Math.random())//nos da un valor aleatorio entre 0 y 1, puede ser 0.1124235235 o 1
+console.log(Math.random() * 1000)//aqui estamos diciendo que nos genere un numero random de 0 a 1000
+console.log(Math.round(Math.random()*1000))//para eliminar los decimales

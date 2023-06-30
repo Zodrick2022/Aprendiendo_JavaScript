@@ -1,0 +1,94 @@
+Elementos del DOM
+console.log(window.document)//ventana windows
+console.log(document)//ventana windows
+console.log(document.head)//etiqueta head
+console.log(document.body)//etiqueta body
+console.log(document.documentElement)//todo el html
+console.log(document.doctype)//tipo de documento
+console.log(document.charset)//juego de caracteres
+console.log(document.title)//etiqueta title
+console.log(document.links )//lista de enlaces que tiene una pagina web 
+console.log(document.images)//lista de imagnes que tiene una pagina web
+console.log(document.forms)//formularios
+console.log(document.styleSheets)//coleccion de hojas de estilo que tiene el documento
+console.log(document.scripts//todos los documentos de JavaScript)
+setTimeout(()=>{//por que en un setTimeout, por que al recargar la pagina no nos da tiempo de seleccionar el contenido que queremos
+    console.log(document.getSelection().toString())
+},3000)//depues de tres segundos que nos muestre por consola lo que hemos seleecionado
+console.write("escribir en la pagina desde JavaScript")
+----
+Seleccion de Elementos
+Todos los elementos HTML son objetos . Y como sabemos todo objeto tiene propiedades y métodos .
+El objeto del documento tiene métodos que le permiten seleccionar el elemento HTML deseado.
+Estos tres métodos son los más utilizados para seleccionar elementos HTML:
+//finds element by id
+document.getElementById(id)
+
+//finds elements by class name
+document.getElementsByClassName(name)
+
+//finds elements by tag name
+document.getElementsByTagName(name)
+
+En el siguiente ejemplo, el getElementByIdmétodo se usa para seleccionar el elemento con id="demo"y cambiar su contenido:
+
+var elem = document.getElementById("demo");
+elem.innerHTML = "Hello World!";
+
+El ejemplo anterior asume que el HTML contiene un elemento con id="demo", por ejemplo <div id="demo"></div>.
+El getElementsByClassName()método devuelve una colección de todos los elementos del documento con el nombre de clase especificado.
+
+Por ejemplo, si nuestra página HTML contiene tres elementos con class="demo", el siguiente código devolverá todos esos elementos como una matriz
+<p>hi</p>
+<p>hello</p>
+<p>hi</p>
+<script>
+var arr = document.getElementsByTagName("p");
+for (var x = 0; x < arr.length; x++) {
+  arr[x].innerHTML = "Hi there";
+}
+</script>
+El script dará como resultado el siguiente HTML:
+
+<p>Hi there</p>
+<p>Hi there</p>
+<p>Hi there</p>
+------
+
+Cada elemento del DOM tiene un conjunto de propiedades y métodos que brindan información sobre sus relaciones en el DOM:
+
+element.childNodesdevuelve una matriz de los nodos secundarios de un elemento.
+
+element.firstChilddevuelve el primer nodo secundario de un elemento.
+
+element.lastChilddevuelve el último nodo secundario de un elemento.
+
+element.hasChildNodesdevuelve verdadero si un elemento tiene nodos secundarios; de lo contrario, devuelve falso.
+
+element.nextSiblingdevuelve el siguiente nodo en el mismo nivel de árbol.
+
+element.previousSiblingdevuelve el nodo anterior en el mismo nivel de árbol.
+
+element.parentNodedevuelve el nodo padre de un elemento.
+
+Podemos, por ejemplo, seleccionar todos los nodos secundarios de un elemento y cambiar su contenido:
+
+<html>
+  <body>
+    <div id ="demo">
+      <p>some text</p>
+      <p>some other text</p>
+    </div>
+
+    <script>
+     var a = document.getElementById("demo");
+     var arr = a.childNodes;
+     for(var x=0;x<arr.length;x++) {
+       arr[x].innerHTML = "new text";
+     }
+    </script>
+
+  </body>
+</html>
+
+El código anterior cambia el texto de ambos párrafos a "texto nuevo".

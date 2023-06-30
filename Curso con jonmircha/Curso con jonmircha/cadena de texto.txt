@@ -1,0 +1,48 @@
+let saludo = "Hola Mundo"
+console.log(saludo.length)
+salida = 10
+la palabra reservada length cuenta el numero de caracteres que esta en la variable incluso el espacio en blanco
+----------------------------------------------------------
+let saludo = "Hola Mundo"
+console.log(saludo.toUpperCase())
+salida = HOLA MUNDO
+Lo que hace el metodo toUpperCase() es escribir las letras en mayusculas
+-----------------------------------------------------------
+let saludo = "Hola Mundo"
+console.log(saludo.toLowerCase())
+salida = hola mundo
+Lo que hace el metodo toLowerCase() es escribir las letras en minusculas
+------------------------------------------------------------
+let saludo = "Hola Mundo"
+console.log(saludo.includes("Hola"))
+salida = true
+Lo que hace el metodo includes() es encontrar una coindicencia dentro de la cadenas de texto en este caso es verdadero
+-
+let saludo = "Hola Mundo"
+console.log(saludo.includes("pais"))
+salida = false
+en este caso la salida es falsa ya que no encontro una conincidencia dentro de la cadena del texto
+--------------------------------------------------------------
+let saludo = "       Hola Mundo         "
+console.log(saludo.trim())
+salida = "Hola mundo"
+Lo que hace el metodo trim es quitar los espacios en blanco que estan alrededor de la cadena de texto
+---------------------------------------------------------------
+let saludo = "Hola Mundo"
+console.log(saludo.split(" ")) para que separe el texto cuando el usuario haya escrito una coma, si no se hace una separacion que esta dentro de split("") lo que hace es que cada letra lo separe y lo convieta en una lista, pero si se hace con una separacion, separa las palabras y lo combierte a una lista
+salida = ["Hola","Mundo"]
+Lo que hace el metodo split es crear un array o arreglo para la cadena de texto
+----------------------------------------------------------------
+CARACTERISTICAS
+Concatenacion:unir una cadena de texto con otra cadena,numero o booleano
+ejemplo:
+let nombre ="Eduard"
+let apellido ="Paredes"
+let saludo = "Hola, mi nombre es " + nombre + " " + apellido
+console.log(saludo)
+salida = "Hola, mi nombre es Eduard Paredes"
+--------------------------------------------------------------
+Interpolacion de variables
+para que el codigo sea mas entendible hacemos lo siguiente
+let saludo =`Hola, mi nombre es ${nombre} ${apellido}` -> esto se llama Template String
+salida = "Hola, mi nombre es Eduard Paredes"

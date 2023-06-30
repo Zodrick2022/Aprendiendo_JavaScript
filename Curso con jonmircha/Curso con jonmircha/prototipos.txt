@@ -1,0 +1,108 @@
+//una de las coasas mas importantes en javascipt
+//POO(Programacion Orientado a Objetos)
+/*
+Clases - Modelo a seguir (idea)
+Objetos - Es una instancia de una clase (es una copia del modelo a seguir) (objeto)
+  atributos - caracteristica o propiedad del objeto(son variables dentro de un objeto)
+  metodos - son las acciones que un objeto puede realizar (funciones dentro de un objeto)
+*/
+
+/*literalmente esto es perdida de recursos
+const animal = {
+    nombre:"Snoppy",
+    sonar(){
+        console.log("Hago sonidos por que estoy vivo")
+    }
+}
+
+console.log(animal)
+const animal2 = {
+    nombre:"lola bunny",
+    sonar(){
+        console.log("Hago sonidos por que estoy vivo")
+    }
+}
+
+console.log(animal2)
+*/
+//quiero generar n cantidad de animales
+para no perder tantos recursos y generar n cantidad
+
+//Funcion constructora, lo escribo una vez y apartir de una funcion genero nuevas instancias(Objetos)
+function Animal(nombre,genero){//utilizar UpperCamelCase en el nombre de la funcion constructora
+ this.nombre = nombre
+ this.genero = genero
+
+ this.sonar = funcion (){//si no se coloca this. en funciones que estan dentro de funciones constructoras esto llevara a causar un error
+    console.log("Hago sonidos por que estoy vivo")
+ }
+ this.saludar = function (){
+    console.log(`hola me llamo ${this.nombre}`)
+ }
+}
+
+const gato = new Animal("Pecas","Macho"),gato1 = new Animal("Kiara","Hembra") //(crear una nueva instancia(objeto) del tipo que le especifiquemos, String, Array, etc, en este caso queremos crear una instancia de la instancia(objeto)Animal)
+console.log(gato)//llamamos a la instancia(objeto) que creamos
+console.log(gato1)
+--------------------------------------------------------------------
+//Funcion constructora donde asignamos los metodos al prototipo, no a la funcion como tal
+function Animal(nombre,genero){
+ this.nombre = nombre
+ this.genero = genero
+}
+//metodos agregados al prototipo de la funcion constructora
+Animal.prototype.sonar = function (){
+    console.log("Soy un gato y mi sonido es un maullido")
+}
+ Animal.prototype.saludar = function (){
+    console.log(`hola me llamo ${this.nombre}`)
+}
+Animal.prototype.maullar = function (){
+    console.log("Miauuuu Miauuu !!!!")
+}
+//esto sirve para que no se dupliquen cada vez que creamos una nueva instancia dentro de esta misma
+
+//Herencia prototipica(padre a hijo)
+function perro(nombre, genero,tamanio){//el leguaje JavaScript esta en ingles por ende no acepta la letra ñ
+    this.super = Animal //su elemento padre va hacer animal
+    this.super(nombre,genero)//de su elemento padre va a recibir"nombre y genero"
+    this.tamanio = tamanio//se agrega una variable propia de perro que es tamaño y que esta va a recibir lo que digite el usuario
+}
+//perro esta heredando de Animal
+perro.prototype = new Animal()
+//creacion del constructor
+perro.prototype.constructor = perro
+//Sobreescritura de metodos(funciones) del prototipo padre en el hijo
+perro.prototype.sonar = function(){//aqui estamos Sobreescribiendo el metodo(funcion) sonar
+    console.log("Soy un perro y mi sonido es un ladrido")
+}
+perro.prototype.saludar = function(){
+    console.log(`Hola me llamo ${this.nombre}`)
+}
+//creando un nuevo metodo esclusivo de la instancia perro
+perro.prototype.ladrar = function(){
+    console.log("Guauuu Guauuuu !!!!!")
+}
+
+
+const gato = new Animal("Pecas","Macho"),gato1 = new Animal("Kiara","Hembra"),gato2 = new Animal("Max","macho"), perro1 = new perro ("Zeus","macho","grande")
+
+console.log(gato)//llamando a la instancia gato
+console.log(gato1)
+console.log(gato2)
+console.log(perro1)
+gato.saludar()
+gato.sonar()//llamado a la funcion de gato
+gato.maullar()
+console.log("----------")
+gato1.saludar()
+gato1.sonar()
+gato1.maullar()
+console.log("----------")
+gato2.saludar()
+gato2.sonar()
+gato2.maullar()
+console.log("----------")
+perro1.saludar()
+perro1.sonar()
+perro1.ladrar()

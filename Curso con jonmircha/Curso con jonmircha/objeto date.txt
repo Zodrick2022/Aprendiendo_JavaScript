@@ -1,0 +1,30 @@
+//hora
+console.log(Date())
+salida =
+    Thu May 18 2023 11:38:36 
+    GMT-0500
+//dia, mes, num-dia, año, horas-minutos-segundos
+//uso horario 
+----
+//no hay ni am o pm
+let fecha = new Date()
+console.log(fecha.getDate())//numero del dia del mes
+console.log(fecha.getDay())//dia de la semana D L M MI J V S -> 0 1 2 3 4 5 6
+console.log(fecha.getMonth())//mes Ene Feb Mar Abr May Jun Jul Ago Sep Oct Nov Dic -> 0 1 2 3 4 5 6 7 8 9 10 11
+console.log(fecha.getYear())//cuantos años han pasado desde 1900
+console.log(fecha.getFullYear())//el presente año 
+console.log(fecha.getHours())//horas, de 0 a 23 horas
+console.log(fecha.getMinutes())//minutos
+console.log(fecha.getSeconds())//segundos
+console.log(fecha.getMilliseconds())//milisegundos
+console.log(toDateString())//solo la fecha completa
+console.log(fecha.toLocaleString())//solo la fecha completa local con horas
+console.log(fecha.toLocaleDateString())//solo la fecha completa local sin horas
+console.log(fecha.toLocaleTimeString())//solo las horas local
+console.log(fecha.getTimezoneOffset())//uso horario en la que nos encontramos
+console.log(fecha.getUTCDate())//numero del dia del mes del uso horario(londres)
+console.log(fecha.getUTCHours())//Hoara del uso horario (londres)
+console.log(Date.now())//cuantos segundo han pasado desde el primero de enero de 1970
+//libreria moment.js manejo de tiempo mas facil
+let nacimiento = new Date(2004,8,26)//fecha de nacimiento
+console.log("Fecha de nacimiento: " + nacimiento)

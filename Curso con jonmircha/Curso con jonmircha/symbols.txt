@@ -1,0 +1,102 @@
+//NUEVOS TIPOS DE DATOS
+Symbol()// es un objeto, tambien es un dato primitivo como el string, number, boolean, null, undefined
+permiten crear identificadores unicos
+solo acepta cadenas de texto y numeros
+Symbol("id")
+Symbol(3)
+//(crear elementos privados dentro de un objeto), cada simbol es diferente
+let id = Symbol("id")
+let id2 = Symbol("id")
+
+console.log(id === id2)
+la salida es: false
+ya que cada Symbol es diferente de cada uno
+------------------------------------------------------------------------
+Set solo acepta valores unicos nada de que se repitan valores
+
+const set = new Set([1,2,3,4,5,true,false,false,{},{},"hola","HOla"])//false se repite,pero en la salida solo aparece 1, cada objeto son diferentes asi que aparece 2 veces y el hola esta escrito de diferente manera
+console.log(set)
+console.log(set.size)//tamaño de un set
+-----
+const set2 = new Set();
+set2.add(1)//agregando un elemento al set
+set2.add(2)
+set2.add(2)
+set2.add(3)
+set2.add(true)
+set2.add(false)
+set2.add(true)
+set2.add({})
+
+------recorrer set
+ciclo for
+for(item of set){
+    console.log(item)
+}
+
+------forEach
+set2.forEach(item =>console.log((item)))
+-----------eliminar un elemento
+set.delete("HOla")//aqui estamos eliminando el elemento HOla que esta mal escrito
+console.log(set)
+-----------comprobar si el elemento esta en el set
+console.log(set.has("hola"))//salida => true (si esta)
+console.log(set.has(19))//salida => false (no esta)
+-----------limpiar un set
+//en el primer set hay 11 elementos, los quiero eliminar
+set.clear()//linpiamos set
+console.log(set)
+ 
+---------convertir un set a un arreglo
+let arr = Array.from(set)
+console.log(arr)//mostrar el arreglo
+console.log(arr[0])mostrar el valor donde esta la pocicion 0
+console.log(arr[9])mostrar el valor donde esta la pocicion 9
+---------------------------------------------------------------------------------------
+Map
+{
+    Imagina que tienes una caja con muchos juguetes diferentes: carros, muñecas, pelotas y bloques. Ahora, quieres saber cuántos juguetes tienes de cada tipo.
+
+    Aquí es donde entra en juego un mapa en JavaScript. Puedes pensar en un mapa como una lista especial que te permite guardar pares de valores. En este caso, podrías usar un mapa para guardar el nombre del juguete y la cantidad de veces que aparece en tu caja.
+
+    let juguetes = ["carro", "muñeca", "carro", "pelota", "bloque", "pelota", "bloque", "bloque"];
+
+    let mapaJuguetes = new Map();
+
+    for (let juguete of juguetes) {
+        if (mapaJuguetes.has(juguete)) {//true
+            let cantidad = mapaJuguetes.get(juguete);
+            mapaJuguetes.set(juguete, cantidad + 1);//el incremento en 1 como un contador de repeticiones. Cada vez que encuentras un juguete en la caja, aumentas el contador en 1 para llevar un registro de cuántas veces se repite ese juguete en particular.
+        } else {//false
+            mapaJuguetes.set(juguete, 1);
+        }
+    }
+
+    console.log(mapaJuguetes);
+
+    En este ejemplo, creamos un mapa llamado "mapaJuguetes". Luego, recorremos el arreglo juguetes con un bucle for...of. Para cada juguete, verificamos si ya existe como clave en el mapa. Si existe, obtenemos su cantidad actual y la incrementamos en 1. Si no existe, lo agregamos al mapa con una cantidad inicial de 1.
+
+    //salida
+    Map(4) {
+        "carro" => 2,
+        "muñeca" => 1,
+        "pelota" => 2,
+        "bloque" => 3
+    }
+
+    Así que, en resumen, un mapa en JavaScript es como una lista especial que te permite guardar pares de valores. Puedes usarlo para contar la cantidad de veces que aparece algo o para asociar valores a claves específicas.
+
+    Los mapas en JavaScript son muy útiles para este tipo de situaciones, ya que te permiten asociar un valor (en este caso, la cantidad de repeticiones) a una clave (el nombre del juguete).
+
+    son especialmente útiles:
+    -Almacenamiento de datos asociativos: Los mapas te permiten asociar un valor a una clave, lo que es útil cuando necesitas almacenar datos relacionados.
+
+    -Conteo de repeticiones: Como mencionamos anteriormente, los mapas son útiles para contar la cantidad de veces que aparece un elemento en una colección. 
+
+    -Eliminación eficiente de elementos: A diferencia de los arrays, los mapas en JavaScript te permiten eliminar elementos de manera más eficiente utilizando la función "delete". 
+
+    -Iteración ordenada: Los mapas conservan el orden de inserción de los elementos, lo que significa que puedes iterar(recorrer) sobre ellos en el orden en que se agregaron.
+
+    -Búsqueda rápida:  Los mapas ofrecen una forma eficiente de búsqueda de elementos por clave. 
+}
+----------------------------------------------------
