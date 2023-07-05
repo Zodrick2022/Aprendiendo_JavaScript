@@ -7,14 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <input style="border-radius: 20px; font-size: large;" type="password" name="contraseña" onkeyup="mostrar()" id="contraseña" placeholder="Contraseña"> <!--onkeyup es un evento donde se ejecuta cuando la tecla deja de estar presionada -->
-    <div style="display: flex;">
-        <hr style="width: 35px;" color="" id="1">
-        <hr style="width: 35px;" color="" id="2">
-        <hr style="width: 35px;" color="" id="3">
-    </div>
-    <p id="p"></p>
-    <ion-icon name="key-outline"></ion-icon>
+    <form style="text-align: center;">
+        <input style="border-radius: 20px; font-size: large;" type="password" name="contraseña" onkeyup="mostrar()" id="contraseña" placeholder="Contraseña"> <!--onkeyup es un evento donde se ejecuta cuando la tecla deja de estar presionada -->
+        <p id="p1"></p>
+        <div style="white-space: nowrap;">
+            <hr style="width: 52px; display: inline-block;" color="" id="1">
+            <hr style="width: 52px; display: inline-block;" color="" id="2">
+            <hr style="width: 52px; display: inline-block;" color="" id="3">
+            <hr style="width: 52px; display: inline-block;" color="" id="4">
+        </div>  
+        <p id="p"></p>
+        <!-- <button onclick="restringciones()" type="button">Hola mundo</button> -->
+    </form>
     <script src="Verificacion.js"></script>
 </body>
 </html>
